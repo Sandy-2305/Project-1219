@@ -34,6 +34,9 @@ namespace WindowsFormsApp1
         {
             if (txtAccount.Text != "" && txtPassword.Text !="")
             {
+                string strAcct = txtAccount.Text;
+                string strPwd = txtPassword.Text;
+                bool isLoginsuc = false;
 
             }
             else 
