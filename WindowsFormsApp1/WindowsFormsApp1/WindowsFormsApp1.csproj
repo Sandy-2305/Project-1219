@@ -46,6 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAll.Designer.cs">
+      <DependentUpon>FormAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormOrderEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormOrderEdit.Designer.cs">
+      <DependentUpon>FormOrderEdit.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormCustomers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +97,9 @@
     <Compile Include="GlobalVar.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAll.resx">
+      <DependentUpon>FormAll.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormCustomers.resx">
       <DependentUpon>FormCustomers.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,6 +111,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormOrder.resx">
       <DependentUpon>FormOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormOrderEdit.resx">
+      <DependentUpon>FormOrderEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormProductDetail.resx">
       <DependentUpon>FormProductDetail.cs</DependentUpon>

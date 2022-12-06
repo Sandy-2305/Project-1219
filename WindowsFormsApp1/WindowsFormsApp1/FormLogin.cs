@@ -12,16 +12,15 @@ namespace WindowsFormsApp1
 {
     public partial class FormLogin : Form
     {
+        bool isLoginsuc = false;
         public FormLogin()
         {
             InitializeComponent();
         }
-
         private void FormLogin_Load(object sender, EventArgs e)
         {
             txtAccount.Text = "";
             txtPassword.Text = "";
-
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -36,13 +35,65 @@ namespace WindowsFormsApp1
             {
                 string strAcct = txtAccount.Text;
                 string strPwd = txtPassword.Text;
-                bool isLoginsuc = false;
+                
+                 
+                if (strAcct == "1" && strPwd == "1")
+                {
+                    isLoginsuc= true;
+                }
+                if (isLoginsuc==true)
+                {
+                    MessageBox.Show("登入成功！");
+                    GlobalVar.memberID = 1;
+                    GlobalVar.strLoginName = "店長";
+                    GlobalVar.intPerms = 1;
+                    Close();
+
+                }
+                else
+                {
+                    MessageBox.Show("登入失敗，請輸入正確的帳號密碼！");
+                    txtAccount.Text = "";
+                    txtPassword.Text = "";
+                }
 
             }
             else 
             {
                 MessageBox.Show("請輸入帳號密碼！");
             }
+        }
+
+        private void FormLogin_FormClosed(object sender, FormClosedEventArgs e)
+        {
+        }
+
+        private void FormLogin_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (isLoginsuc == false) 
+            { e.Cancel = true; }
+            else
+            { e.Cancel = false; }
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtAccount_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 

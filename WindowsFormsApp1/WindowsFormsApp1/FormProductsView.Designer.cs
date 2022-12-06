@@ -75,6 +75,7 @@
             this.btnPicMode.TabIndex = 3;
             this.btnPicMode.Text = "圖片模式";
             this.btnPicMode.UseVisualStyleBackColor = true;
+            this.btnPicMode.Click += new System.EventHandler(this.btnPicMode_Click);
             // 
             // btnLstMode
             // 
