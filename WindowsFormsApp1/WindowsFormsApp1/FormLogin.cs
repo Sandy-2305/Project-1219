@@ -12,7 +12,7 @@ namespace WindowsFormsApp1
 {
     public partial class FormLogin : Form
     {
-        bool isLoginsuc = false;
+        bool isLoginsuc = false; // 驗證是否成功
         public FormLogin()
         {
             InitializeComponent();
@@ -31,7 +31,7 @@ namespace WindowsFormsApp1
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtAccount.Text != "" && txtPassword.Text !="")
+            if (txtAccount.Text != "" && txtPassword.Text !="") 
             {
                 
                 string strAcct = txtAccount.Text;
@@ -42,8 +42,11 @@ namespace WindowsFormsApp1
                 {
                     isLoginsuc= true;
                 }
+
+
                 if (isLoginsuc==true)
                 {
+                    // 登入成功
                     MessageBox.Show("登入成功！");
                     GlobalVar.memberID = 1;
                     GlobalVar.strLoginName = "店長";
@@ -53,6 +56,7 @@ namespace WindowsFormsApp1
                 }
                 else
                 {
+                    // 登入失敗，清除欄位。
                     MessageBox.Show("登入失敗，請輸入正確的帳號密碼！");
                     txtAccount.Text = "";
                     txtPassword.Text = "";
@@ -74,7 +78,7 @@ namespace WindowsFormsApp1
         private void FormLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (isLoginsuc == false) 
-            { e.Cancel = true; }
+            { e.Cancel = true; }  // 如果驗證失敗，FormLogin不關閉。
             else
             { e.Cancel = false; }
         }

@@ -37,6 +37,7 @@
             this.btnFormPView = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.btnCustomer = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -80,15 +81,16 @@
             // panel3
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Location = new System.Drawing.Point(245, 162);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(1628, 1068);
+            this.panel3.Size = new System.Drawing.Size(1383, 906);
             this.panel3.TabIndex = 2;
             this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Wheat;
+            this.panel1.Controls.Add(this.btnCustomer);
             this.panel1.Controls.Add(this.btnIndex);
             this.panel1.Controls.Add(this.btnFormPView);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -149,16 +151,33 @@
             this.panel5.Size = new System.Drawing.Size(1628, 100);
             this.panel5.TabIndex = 3;
             // 
+            // btnCustomer
+            // 
+            this.btnCustomer.BackColor = System.Drawing.Color.Maroon;
+            this.btnCustomer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCustomer.FlatAppearance.BorderSize = 0;
+            this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCustomer.Font = new System.Drawing.Font("微軟正黑體", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnCustomer.ForeColor = System.Drawing.Color.White;
+            this.btnCustomer.Location = new System.Drawing.Point(0, 175);
+            this.btnCustomer.Name = "btnCustomer";
+            this.btnCustomer.Size = new System.Drawing.Size(245, 62);
+            this.btnCustomer.TabIndex = 2;
+            this.btnCustomer.Text = "顧客資訊";
+            this.btnCustomer.UseVisualStyleBackColor = false;
+            this.btnCustomer.Click += new System.EventHandler(this.btnCustomer_Click);
+            // 
             // FormAll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.OldLace;
             this.ClientSize = new System.Drawing.Size(1628, 1068);
+            this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.panel3);
             this.Name = "FormAll";
             this.Text = "首頁";
             this.Load += new System.EventHandler(this.FormAll_Load);
@@ -182,5 +201,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnIndex;
+        private System.Windows.Forms.Button btnCustomer;
     }
 }

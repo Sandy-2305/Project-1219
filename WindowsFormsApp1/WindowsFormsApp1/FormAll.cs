@@ -36,14 +36,17 @@ namespace WindowsFormsApp1
             btnIndex.BackColor = Color.Maroon;
             btnIndex.ForeColor = Color.White;
 
+            btnCustomer.BackColor = Color.Maroon;
+            btnCustomer.ForeColor = Color.White;
+
             lblTitle.Text = "商品列表";
             
-            FormProductsView FormView = new FormProductsView();
-            FromShow(FormView);
+            FormProductsView FormProduct = new FormProductsView();
+            FromShow(FormProduct);
 
 
         }
-        private void FromShow(Form ChildForm)
+        internal void FromShow(Form ChildForm)
         {
             panel3.Controls.Clear();
             
@@ -83,9 +86,30 @@ namespace WindowsFormsApp1
             btnFormPView.BackColor = Color.Maroon;
             btnFormPView.ForeColor = Color.White;
 
+            btnCustomer.BackColor = Color.Maroon;
+            btnCustomer.ForeColor = Color.White;
+
+
             lblTitle.Text = "首頁";
 
             Form1 FormView = new Form1();
+            FromShow(FormView);
+        }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            btnIndex.BackColor = Color.Maroon;
+            btnIndex.ForeColor = Color.White;
+
+            btnFormPView.BackColor = Color.Maroon;
+            btnFormPView.ForeColor = Color.White;
+
+            btnCustomer.BackColor = Color.OldLace;
+            btnCustomer.ForeColor = Color.Maroon;
+
+            lblTitle.Text = "顧客資料";
+
+            FormCustomers FormView = new FormCustomers();
             FromShow(FormView);
         }
     }

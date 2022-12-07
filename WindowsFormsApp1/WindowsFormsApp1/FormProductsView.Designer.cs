@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.listViewProduct = new System.Windows.Forms.ListView();
             this.btnPicMode = new System.Windows.Forms.Button();
-            this.btnLstMode = new System.Windows.Forms.Button();
+            this.btnListMode = new System.Windows.Forms.Button();
             this.btnReload = new System.Windows.Forms.Button();
             this.btnNewProduct = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -57,6 +57,8 @@
             // btnPicMode
             // 
             this.btnPicMode.BackColor = System.Drawing.Color.Maroon;
+            this.btnPicMode.FlatAppearance.BorderSize = 0;
+            this.btnPicMode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPicMode.Font = new System.Drawing.Font("微軟正黑體", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnPicMode.ForeColor = System.Drawing.Color.FloralWhite;
             this.btnPicMode.Location = new System.Drawing.Point(3, 203);
@@ -67,22 +69,26 @@
             this.btnPicMode.UseVisualStyleBackColor = false;
             this.btnPicMode.Click += new System.EventHandler(this.btnPicMode_Click);
             // 
-            // btnLstMode
+            // btnListMode
             // 
-            this.btnLstMode.BackColor = System.Drawing.Color.Maroon;
-            this.btnLstMode.Font = new System.Drawing.Font("微軟正黑體", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnLstMode.ForeColor = System.Drawing.Color.FloralWhite;
-            this.btnLstMode.Location = new System.Drawing.Point(3, 283);
-            this.btnLstMode.Name = "btnLstMode";
-            this.btnLstMode.Size = new System.Drawing.Size(288, 74);
-            this.btnLstMode.TabIndex = 4;
-            this.btnLstMode.Text = "列表模式";
-            this.btnLstMode.UseVisualStyleBackColor = false;
-            this.btnLstMode.Click += new System.EventHandler(this.btnLstMode_Click);
+            this.btnListMode.BackColor = System.Drawing.Color.Maroon;
+            this.btnListMode.FlatAppearance.BorderSize = 0;
+            this.btnListMode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnListMode.Font = new System.Drawing.Font("微軟正黑體", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnListMode.ForeColor = System.Drawing.Color.FloralWhite;
+            this.btnListMode.Location = new System.Drawing.Point(3, 283);
+            this.btnListMode.Name = "btnListMode";
+            this.btnListMode.Size = new System.Drawing.Size(288, 74);
+            this.btnListMode.TabIndex = 4;
+            this.btnListMode.Text = "列表模式";
+            this.btnListMode.UseVisualStyleBackColor = false;
+            this.btnListMode.Click += new System.EventHandler(this.btnListMode_Click);
             // 
             // btnReload
             // 
             this.btnReload.BackColor = System.Drawing.Color.Maroon;
+            this.btnReload.FlatAppearance.BorderSize = 0;
+            this.btnReload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReload.Font = new System.Drawing.Font("微軟正黑體", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnReload.ForeColor = System.Drawing.Color.FloralWhite;
             this.btnReload.Location = new System.Drawing.Point(3, 363);
@@ -96,6 +102,8 @@
             // btnNewProduct
             // 
             this.btnNewProduct.BackColor = System.Drawing.Color.Maroon;
+            this.btnNewProduct.FlatAppearance.BorderSize = 0;
+            this.btnNewProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewProduct.Font = new System.Drawing.Font("微軟正黑體", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnNewProduct.ForeColor = System.Drawing.Color.FloralWhite;
             this.btnNewProduct.Location = new System.Drawing.Point(3, 443);
@@ -117,8 +125,9 @@
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.Color.Wheat;
             this.panel2.Controls.Add(this.btnNewProduct);
-            this.panel2.Controls.Add(this.btnLstMode);
+            this.panel2.Controls.Add(this.btnListMode);
             this.panel2.Controls.Add(this.btnReload);
             this.panel2.Controls.Add(this.btnPicMode);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
@@ -155,7 +164,7 @@
         #endregion
         private System.Windows.Forms.ListView listViewProduct;
         private System.Windows.Forms.Button btnPicMode;
-        private System.Windows.Forms.Button btnLstMode;
+        private System.Windows.Forms.Button btnListMode;
         private System.Windows.Forms.Button btnReload;
         private System.Windows.Forms.Button btnNewProduct;
         private System.Windows.Forms.Panel panel1;
