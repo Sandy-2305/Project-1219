@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -23,12 +24,130 @@ namespace WindowsFormsApp1
 
         private void FormProductsView_Load(object sender, EventArgs e)
         {
-            
+            SqlConnectionStringBuilder scsb = new SqlConnectionStringBuilder();
+            scsb.DataSource = @".";
+            scsb.InitialCatalog = "MyPJDB";
+            scsb.IntegratedSecurity = true;
+            strMyPJDBConnectionString = scsb.ToString();
         }
 
         private void btnPicMode_Click(object sender, EventArgs e)
         {
+            picturemode();
+        }
+        private void picturemode()
+        {
+            listViewProduct.Clear();
+            listViewProduct.View = View.LargeIcon; //LargeIcon, SmallIcon, List, Tile
+            imageListProduct.ImageSize = new Size(120, 120);
+            listViewProduct.LargeImageList = imageListProduct; //LargeIcon, Tile
+            listViewProduct.SmallImageList = imageListProduct; //SmallIcon, List
 
+            for (int i = 0; i < imageListProduct.Images.Count; i += 1)
+            {
+                ListViewItem item = new ListViewItem();
+                item.ImageIndex = i;
+                item.Font = new Font("微軟正黑體", 14, FontStyle.Regular);
+                item.Text = listProductName[i] + " " + listProductPrice[i] + "元";
+                item.Tag = listProductID[i];
+                listViewProduct.Items.Add(item);
+            }
+        }
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void SQL()
+        {
+            SqlConnection con = new SqlConnection(strMyPJDBConnectionString);
+            con.Open();
+            string strSQL = "select * from Products;";
+            SqlCommand cmd = new SqlCommand(strSQL, con);
+            SqlDataReader reader = cmd.ExecuteReader();
+
+            string image_dir = @"ProductsPicture\"; //圖檔目錄
+            string image_name = ""; //圖檔名稱
+            int i = 0;
+
+            while (reader.Read())
+            {
+                listProductID.Add((int)reader["ID"]);
+                listProductName.Add(reader["ProductName"].ToString());
+                listProductPrice.Add((int)reader["ProductPrice"]);
+                image_name = reader["ProductImage"].ToString();
+                Image myProductImage = Image.FromFile(image_dir + image_name);
+                imageListProduct.Images.Add(myProductImage);
+                i += 1;
+            }
+            Console.WriteLine($"讀取{i}筆資料");
+            reader.Close();
+            con.Close();
+        }
+
+        private void listViewProduct_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnReload_Click(object sender, EventArgs e)
+        {
+            listProductID.Clear();
+            listProductName.Clear();
+            listProductPrice.Clear();
+            imageListProduct.Images.Clear();
+
+            SQL();
+            if (listViewProduct.View == View.Details)
+            {
+                listmode();
+            }
+            else
+            {
+                picturemode();
+            }
+        }
+
+        private void listViewProduct_ItemActivate(object sender, EventArgs e)
+        {
+            FormProductDetail ProductDetail = new FormProductDetail();
+            ProductDetail.ID = (int)listViewProduct.SelectedItems[0].Tag;
+            ProductDetail.ShowDialog();
+        }
+        private void listmode()
+        {
+            listViewProduct.Clear();
+            listViewProduct.LargeImageList = null;
+            listViewProduct.SmallImageList = null;
+            listViewProduct.View = View.Details;
+            listViewProduct.Columns.Add("PID", 100);
+            listViewProduct.Columns.Add("商品名稱", 200);
+            listViewProduct.Columns.Add("商品價格", 80);
+            listViewProduct.FullRowSelect = true;
+            listViewProduct.GridLines = true;
+
+            for (int i = 0; i < listProductID.Count; i += 1)
+            {
+                ListViewItem item = new ListViewItem();
+                listViewProduct.Font = new Font("微軟正黑體", 12, FontStyle.Regular);
+                item.Text = listProductID[i].ToString();
+                item.SubItems.Add(listProductName[i]);
+                item.SubItems.Add(listProductPrice[i].ToString());
+                item.Tag = listProductID[i];
+
+                listViewProduct.Items.Add(item);
+            }
+        }
+
+        private void btnLstMode_Click(object sender, EventArgs e)
+        {
+            listmode();
+        }
+
+        private void btnNewProduct_Click(object sender, EventArgs e)
+        {
+            FormProductDetail myFormDetail = new FormProductDetail();
+            myFormDetail.ShowDialog();
         }
     }
 }

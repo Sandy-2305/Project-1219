@@ -33,6 +33,7 @@ namespace WindowsFormsApp1
         {
             if (txtAccount.Text != "" && txtPassword.Text !="")
             {
+                
                 string strAcct = txtAccount.Text;
                 string strPwd = txtPassword.Text;
                 
@@ -62,10 +63,12 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("請輸入帳號密碼！");
             }
+
         }
 
         private void FormLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
+
         }
 
         private void FormLogin_FormClosing(object sender, FormClosingEventArgs e)
@@ -95,6 +98,7 @@ namespace WindowsFormsApp1
         {
 
         }
+    
     }
 
 }

@@ -19,22 +19,74 @@ namespace WindowsFormsApp1
 
         private void FormAll_Load(object sender, EventArgs e)
         {
+            
             FormLogin myLogin = new FormLogin();
             myLogin.ShowDialog();
-            btnFormPView.BackColor = Color.SandyBrown;
-            lblLoginInfo.Text = 
-                $"ID：{GlobalVar.memberID}     " +
-                $"姓名：{GlobalVar.strLoginName}";
+
+            lblTitle.Text = "首頁";
+
+            lblLoginInfo.Text = $"ID：{GlobalVar.memberID}  姓名：{GlobalVar.strLoginName}";
         }
 
         private void btnFormPView_Click(object sender, EventArgs e)
         {
             btnFormPView.BackColor = Color.OldLace;
-        }
+            btnFormPView.ForeColor= Color.Maroon;
 
+            btnIndex.BackColor = Color.Maroon;
+            btnIndex.ForeColor = Color.White;
+
+            lblTitle.Text = "商品列表";
+            
+            FormProductsView FormView = new FormProductsView();
+            FromShow(FormView);
+
+
+        }
+        private void FromShow(Form ChildForm)
+        {
+            panel3.Controls.Clear();
+            
+            ChildForm.TopLevel = false; //最上層=否
+            ChildForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None; //無邊框
+            ChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
+          
+            panel3.Controls.Add(ChildForm);
+            ChildForm.Show();
+           
+        }
         private void panel3_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void lblLoginInfo_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnIndex_Click(object sender, EventArgs e)
+        {
+            btnIndex.BackColor = Color.OldLace;
+            btnIndex.ForeColor = Color.Maroon;
+
+            btnFormPView.BackColor = Color.Maroon;
+            btnFormPView.ForeColor = Color.White;
+
+            lblTitle.Text = "首頁";
+
+            Form1 FormView = new Form1();
+            FromShow(FormView);
         }
     }
 }

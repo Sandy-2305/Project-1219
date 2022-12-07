@@ -241,6 +241,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FormProductDetail";
             this.Text = "商品詳細資訊";
+            this.Load += new System.EventHandler(this.FormProductDetail_Load);
             this.groupBoxNewProduct.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProduct)).EndInit();
             this.groupBoxAlterProduct.ResumeLayout(false);
