@@ -156,9 +156,8 @@ namespace WindowsFormsApp1
 
                     SqlConnection con = new SqlConnection(strMyPJDBConnectionString);
                     con.Open();
-                    string strSQL = "update products set ProductName=@NewPname, ProductPrice=@NewPrice, ProductInfo=@NewPDesc, ProductImage=@NewPimage, ProductType=@NewPType where ProductID=@SearchID;";
+                    string strSQL ="insert into products values(@NewPname, @NewPrice, @newPdesc, @newPimage,  @NewPType);";
                     SqlCommand cmd = new SqlCommand(strSQL, con);
-                    cmd.Parameters.AddWithValue("@SearchID", ID);
                     cmd.Parameters.AddWithValue("@NewPname", txtProductName.Text);
                     int intPrice = 0;
                     Int32.TryParse(txtProductPrice.Text, out intPrice);
