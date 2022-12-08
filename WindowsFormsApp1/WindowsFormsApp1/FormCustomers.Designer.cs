@@ -30,6 +30,8 @@
         {
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.btnReload = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -40,6 +42,8 @@
             this.dtpBirthStart = new System.Windows.Forms.DateTimePicker();
             this.panel4 = new System.Windows.Forms.Panel();
             this.listResult = new System.Windows.Forms.ListBox();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
             this.panel9 = new System.Windows.Forms.Panel();
             this.panel8 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -80,10 +84,9 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnAll = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnReload = new System.Windows.Forms.Button();
-            this.panel11 = new System.Windows.Forms.Panel();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel11.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -95,7 +98,6 @@
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox4
@@ -129,6 +131,32 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.btnReload);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel11.Location = new System.Drawing.Point(6, 49);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(1491, 84);
+            this.panel11.TabIndex = 1;
+            // 
+            // btnReload
+            // 
+            this.btnReload.BackColor = System.Drawing.Color.Maroon;
+            this.btnReload.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnReload.FlatAppearance.BorderSize = 0;
+            this.btnReload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReload.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnReload.ForeColor = System.Drawing.Color.White;
+            this.btnReload.Location = new System.Drawing.Point(0, 0);
+            this.btnReload.Margin = new System.Windows.Forms.Padding(6);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(560, 84);
+            this.btnReload.TabIndex = 7;
+            this.btnReload.Text = "重新整理會員資料列表";
+            this.btnReload.UseVisualStyleBackColor = false;
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
             // groupBox3
             // 
@@ -224,6 +252,8 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.listResult);
+            this.panel4.Controls.Add(this.panel13);
+            this.panel4.Controls.Add(this.panel12);
             this.panel4.Controls.Add(this.panel9);
             this.panel4.Controls.Add(this.panel8);
             this.panel4.Controls.Add(this.panel6);
@@ -239,11 +269,27 @@
             this.listResult.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listResult.FormattingEnabled = true;
             this.listResult.ItemHeight = 40;
-            this.listResult.Location = new System.Drawing.Point(67, 57);
+            this.listResult.Location = new System.Drawing.Point(67, 78);
             this.listResult.Margin = new System.Windows.Forms.Padding(6);
             this.listResult.Name = "listResult";
-            this.listResult.Size = new System.Drawing.Size(576, 300);
+            this.listResult.Size = new System.Drawing.Size(576, 258);
             this.listResult.TabIndex = 12;
+            // 
+            // panel13
+            // 
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(67, 57);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(576, 21);
+            this.panel13.TabIndex = 17;
+            // 
+            // panel12
+            // 
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel12.Location = new System.Drawing.Point(67, 336);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(576, 21);
+            this.panel12.TabIndex = 16;
             // 
             // panel9
             // 
@@ -422,6 +468,7 @@
             this.btnNext.TabIndex = 57;
             this.btnNext.Text = "下一筆";
             this.btnNext.UseVisualStyleBackColor = false;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
             // 
             // btnPrevious
             // 
@@ -436,6 +483,7 @@
             this.btnPrevious.TabIndex = 56;
             this.btnPrevious.Text = "上一筆";
             this.btnPrevious.UseVisualStyleBackColor = false;
+            this.btnPrevious.Click += new System.EventHandler(this.btnPrevious_Click);
             // 
             // btnFirst
             // 
@@ -655,6 +703,7 @@
             this.btnDataRecovery.TabIndex = 6;
             this.btnDataRecovery.Text = "回復資料";
             this.btnDataRecovery.UseVisualStyleBackColor = false;
+            this.btnDataRecovery.Click += new System.EventHandler(this.btnDataRecovery_Click);
             // 
             // btnClear
             // 
@@ -762,32 +811,6 @@
             this.panel2.Size = new System.Drawing.Size(1503, 805);
             this.panel2.TabIndex = 9;
             // 
-            // btnReload
-            // 
-            this.btnReload.BackColor = System.Drawing.Color.Maroon;
-            this.btnReload.Dock = System.Windows.Forms.DockStyle.Left;
-            this.btnReload.FlatAppearance.BorderSize = 0;
-            this.btnReload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReload.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnReload.ForeColor = System.Drawing.Color.White;
-            this.btnReload.Location = new System.Drawing.Point(0, 0);
-            this.btnReload.Margin = new System.Windows.Forms.Padding(6);
-            this.btnReload.Name = "btnReload";
-            this.btnReload.Size = new System.Drawing.Size(560, 84);
-            this.btnReload.TabIndex = 7;
-            this.btnReload.Text = "重新整理會員資料列表";
-            this.btnReload.UseVisualStyleBackColor = false;
-            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
-            // 
-            // panel11
-            // 
-            this.panel11.Controls.Add(this.btnReload);
-            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel11.Location = new System.Drawing.Point(6, 49);
-            this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(1491, 84);
-            this.panel11.TabIndex = 1;
-            // 
             // FormCustomers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
@@ -802,6 +825,7 @@
             this.Load += new System.EventHandler(this.FormCustomers_Load);
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel11.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
@@ -819,7 +843,6 @@
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel11.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -880,5 +903,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnReload;
         private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel12;
     }
 }
