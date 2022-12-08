@@ -49,7 +49,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.cBoxProductType = new System.Windows.Forms.ComboBox();
+            this.txtProductType = new System.Windows.Forms.TextBox();
             this.groupBoxNewProduct.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProduct)).BeginInit();
             this.groupBoxAlterProduct.SuspendLayout();
@@ -289,14 +289,12 @@
             this.label7.TabIndex = 27;
             this.label7.Text = "商品種類";
             // 
-            // cBoxProductType
+            // txtProductType
             // 
-            this.cBoxProductType.FormattingEnabled = true;
-            this.cBoxProductType.Location = new System.Drawing.Point(244, 369);
-            this.cBoxProductType.Name = "cBoxProductType";
-            this.cBoxProductType.Size = new System.Drawing.Size(376, 32);
-            this.cBoxProductType.TabIndex = 28;
-            this.cBoxProductType.SelectedIndexChanged += new System.EventHandler(this.cBoxProductType_SelectedIndexChanged);
+            this.txtProductType.Location = new System.Drawing.Point(244, 365);
+            this.txtProductType.Name = "txtProductType";
+            this.txtProductType.Size = new System.Drawing.Size(376, 36);
+            this.txtProductType.TabIndex = 28;
             // 
             // FormProductDetail
             // 
@@ -305,7 +303,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.OldLace;
             this.ClientSize = new System.Drawing.Size(1301, 1068);
-            this.Controls.Add(this.cBoxProductType);
+            this.Controls.Add(this.txtProductType);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -357,6 +355,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.ComboBox cBoxProductType;
+        private System.Windows.Forms.TextBox txtProductType;
     }
 }
