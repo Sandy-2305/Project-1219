@@ -55,6 +55,7 @@
             this.FliterSearch = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
             this.Lable11 = new System.Windows.Forms.Label();
             this.btnLast = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
@@ -398,6 +399,7 @@
             // groupBox2
             // 
             this.groupBox2.BackColor = System.Drawing.Color.Cornsilk;
+            this.groupBox2.Controls.Add(this.label8);
             this.groupBox2.Controls.Add(this.Lable11);
             this.groupBox2.Controls.Add(this.btnLast);
             this.groupBox2.Controls.Add(this.btnNext);
@@ -428,6 +430,15 @@
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "資料欄位";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(53, 307);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(111, 40);
+            this.label8.TabIndex = 60;
+            this.label8.Text = "label8";
             // 
             // Lable11
             // 
@@ -905,5 +916,6 @@
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label label8;
     }
 }
