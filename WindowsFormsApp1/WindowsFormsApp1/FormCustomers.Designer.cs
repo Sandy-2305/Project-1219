@@ -31,9 +31,27 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.dtpBirthEnd = new System.Windows.Forms.DateTimePicker();
+            this.dtpBirthStart = new System.Windows.Forms.DateTimePicker();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.listResult = new System.Windows.Forms.ListBox();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label6 = new System.Windows.Forms.Label();
             this.txtKeyWord = new System.Windows.Forms.TextBox();
+            this.FliterSearch = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.Lable11 = new System.Windows.Forms.Label();
             this.btnLast = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnPrevious = new System.Windows.Forms.Button();
@@ -62,43 +80,29 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnAll = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.FliterSearch = new System.Windows.Forms.Button();
-            this.Lable11 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.dtpBirthEnd = new System.Windows.Forms.DateTimePicker();
-            this.dtpBirthStart = new System.Windows.Forms.DateTimePicker();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
-            this.panel7 = new System.Windows.Forms.Panel();
-            this.label10 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.label6 = new System.Windows.Forms.Label();
+            this.btnReload = new System.Windows.Forms.Button();
+            this.panel11 = new System.Windows.Forms.Panel();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox3.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel7.SuspendLayout();
-            this.panel10.SuspendLayout();
+            this.panel11.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox4
             // 
             this.groupBox4.BackColor = System.Drawing.Color.Wheat;
             this.groupBox4.Controls.Add(this.dataGridView1);
+            this.groupBox4.Controls.Add(this.panel11);
             this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox4.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.groupBox4.ForeColor = System.Drawing.Color.Maroon;
@@ -116,12 +120,12 @@
             this.dataGridView1.BackgroundColor = System.Drawing.Color.Azure;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 49);
+            this.dataGridView1.Location = new System.Drawing.Point(6, 133);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(6);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1491, 426);
+            this.dataGridView1.Size = new System.Drawing.Size(1491, 342);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -145,6 +149,90 @@
             this.groupBox3.Text = "進階搜尋";
             this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.panel7);
+            this.panel5.Controls.Add(this.label14);
+            this.panel5.Controls.Add(this.label13);
+            this.panel5.Controls.Add(this.dtpBirthEnd);
+            this.panel5.Controls.Add(this.dtpBirthStart);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(6, 231);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(710, 211);
+            this.panel5.TabIndex = 17;
+            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.DarkSalmon;
+            this.panel7.Controls.Add(this.label10);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(710, 57);
+            this.panel7.TabIndex = 16;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label10.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label10.Location = new System.Drawing.Point(0, 0);
+            this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(209, 40);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "生日區間指定";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(188, 143);
+            this.label14.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(49, 40);
+            this.label14.TabIndex = 15;
+            this.label14.Text = "到";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(188, 83);
+            this.label13.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(49, 40);
+            this.label13.TabIndex = 14;
+            this.label13.Text = "從";
+            // 
+            // dtpBirthEnd
+            // 
+            this.dtpBirthEnd.Location = new System.Drawing.Point(249, 136);
+            this.dtpBirthEnd.Margin = new System.Windows.Forms.Padding(6);
+            this.dtpBirthEnd.Name = "dtpBirthEnd";
+            this.dtpBirthEnd.Size = new System.Drawing.Size(292, 50);
+            this.dtpBirthEnd.TabIndex = 13;
+            // 
+            // dtpBirthStart
+            // 
+            this.dtpBirthStart.Location = new System.Drawing.Point(249, 76);
+            this.dtpBirthStart.Margin = new System.Windows.Forms.Padding(6);
+            this.dtpBirthStart.Name = "dtpBirthStart";
+            this.dtpBirthStart.Size = new System.Drawing.Size(292, 50);
+            this.dtpBirthStart.TabIndex = 12;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.listResult);
+            this.panel4.Controls.Add(this.panel9);
+            this.panel4.Controls.Add(this.panel8);
+            this.panel4.Controls.Add(this.panel6);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(6, 442);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(710, 357);
+            this.panel4.TabIndex = 16;
+            // 
             // listResult
             // 
             this.listResult.BackColor = System.Drawing.Color.FloralWhite;
@@ -157,6 +245,78 @@
             this.listResult.Size = new System.Drawing.Size(576, 300);
             this.listResult.TabIndex = 12;
             // 
+            // panel9
+            // 
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel9.Location = new System.Drawing.Point(643, 57);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(67, 300);
+            this.panel9.TabIndex = 15;
+            // 
+            // panel8
+            // 
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel8.Location = new System.Drawing.Point(0, 57);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(67, 300);
+            this.panel8.TabIndex = 14;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.DarkSalmon;
+            this.panel6.Controls.Add(this.label12);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(710, 57);
+            this.panel6.TabIndex = 13;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label12.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label12.Location = new System.Drawing.Point(0, 0);
+            this.label12.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(145, 40);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "搜尋結果";
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.panel10);
+            this.panel3.Controls.Add(this.txtKeyWord);
+            this.panel3.Controls.Add(this.FliterSearch);
+            this.panel3.Controls.Add(this.comboBox1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(6, 49);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(710, 182);
+            this.panel3.TabIndex = 15;
+            // 
+            // panel10
+            // 
+            this.panel10.BackColor = System.Drawing.Color.DarkSalmon;
+            this.panel10.Controls.Add(this.label6);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(710, 57);
+            this.panel10.TabIndex = 17;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label6.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label6.Location = new System.Drawing.Point(0, 0);
+            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(241, 40);
+            this.label6.TabIndex = 13;
+            this.label6.Text = "欄位關鍵字搜尋";
+            // 
             // txtKeyWord
             // 
             this.txtKeyWord.Location = new System.Drawing.Point(54, 90);
@@ -164,6 +324,30 @@
             this.txtKeyWord.Name = "txtKeyWord";
             this.txtKeyWord.Size = new System.Drawing.Size(270, 50);
             this.txtKeyWord.TabIndex = 4;
+            // 
+            // FliterSearch
+            // 
+            this.FliterSearch.BackColor = System.Drawing.Color.Chocolate;
+            this.FliterSearch.FlatAppearance.BorderSize = 0;
+            this.FliterSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FliterSearch.Font = new System.Drawing.Font("微軟正黑體", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.FliterSearch.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.FliterSearch.Location = new System.Drawing.Point(485, 91);
+            this.FliterSearch.Name = "FliterSearch";
+            this.FliterSearch.Size = new System.Drawing.Size(183, 48);
+            this.FliterSearch.TabIndex = 14;
+            this.FliterSearch.Text = "進階搜尋";
+            this.FliterSearch.UseVisualStyleBackColor = false;
+            this.FliterSearch.Click += new System.EventHandler(this.FliterSearch_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(333, 90);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(146, 48);
+            this.comboBox1.TabIndex = 13;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // groupBox2
             // 
@@ -198,6 +382,17 @@
             this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "資料欄位";
+            // 
+            // Lable11
+            // 
+            this.Lable11.AutoSize = true;
+            this.Lable11.BackColor = System.Drawing.SystemColors.Window;
+            this.Lable11.Font = new System.Drawing.Font("微軟正黑體", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.Lable11.Location = new System.Drawing.Point(546, 166);
+            this.Lable11.Name = "Lable11";
+            this.Lable11.Size = new System.Drawing.Size(123, 35);
+            this.Lable11.TabIndex = 59;
+            this.Lable11.Text = "姓名搜尋";
             // 
             // btnLast
             // 
@@ -491,6 +686,7 @@
             this.btnDelete.TabIndex = 4;
             this.btnDelete.Text = "刪除資料";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnNew
             // 
@@ -506,6 +702,7 @@
             this.btnNew.TabIndex = 3;
             this.btnNew.Text = "新增資料";
             this.btnNew.UseVisualStyleBackColor = false;
+            this.btnNew.Click += new System.EventHandler(this.btnNew_Click);
             // 
             // btnAlter
             // 
@@ -565,196 +762,31 @@
             this.panel2.Size = new System.Drawing.Size(1503, 805);
             this.panel2.TabIndex = 9;
             // 
-            // comboBox1
+            // btnReload
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(333, 90);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(146, 48);
-            this.comboBox1.TabIndex = 13;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.btnReload.BackColor = System.Drawing.Color.Maroon;
+            this.btnReload.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnReload.FlatAppearance.BorderSize = 0;
+            this.btnReload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReload.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnReload.ForeColor = System.Drawing.Color.White;
+            this.btnReload.Location = new System.Drawing.Point(0, 0);
+            this.btnReload.Margin = new System.Windows.Forms.Padding(6);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(560, 84);
+            this.btnReload.TabIndex = 7;
+            this.btnReload.Text = "重新整理會員資料列表";
+            this.btnReload.UseVisualStyleBackColor = false;
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
-            // FliterSearch
+            // panel11
             // 
-            this.FliterSearch.BackColor = System.Drawing.Color.Chocolate;
-            this.FliterSearch.FlatAppearance.BorderSize = 0;
-            this.FliterSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FliterSearch.Font = new System.Drawing.Font("微軟正黑體", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.FliterSearch.ForeColor = System.Drawing.SystemColors.MenuBar;
-            this.FliterSearch.Location = new System.Drawing.Point(485, 91);
-            this.FliterSearch.Name = "FliterSearch";
-            this.FliterSearch.Size = new System.Drawing.Size(183, 48);
-            this.FliterSearch.TabIndex = 14;
-            this.FliterSearch.Text = "進階搜尋";
-            this.FliterSearch.UseVisualStyleBackColor = false;
-            this.FliterSearch.Click += new System.EventHandler(this.FliterSearch_Click);
-            // 
-            // Lable11
-            // 
-            this.Lable11.AutoSize = true;
-            this.Lable11.BackColor = System.Drawing.SystemColors.Window;
-            this.Lable11.Font = new System.Drawing.Font("微軟正黑體", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Lable11.Location = new System.Drawing.Point(546, 166);
-            this.Lable11.Name = "Lable11";
-            this.Lable11.Size = new System.Drawing.Size(123, 35);
-            this.Lable11.TabIndex = 59;
-            this.Lable11.Text = "姓名搜尋";
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.panel10);
-            this.panel3.Controls.Add(this.txtKeyWord);
-            this.panel3.Controls.Add(this.FliterSearch);
-            this.panel3.Controls.Add(this.comboBox1);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel3.Location = new System.Drawing.Point(6, 49);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(710, 182);
-            this.panel3.TabIndex = 15;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.listResult);
-            this.panel4.Controls.Add(this.panel9);
-            this.panel4.Controls.Add(this.panel8);
-            this.panel4.Controls.Add(this.panel6);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(6, 442);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(710, 357);
-            this.panel4.TabIndex = 16;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.panel7);
-            this.panel5.Controls.Add(this.label14);
-            this.panel5.Controls.Add(this.label13);
-            this.panel5.Controls.Add(this.dtpBirthEnd);
-            this.panel5.Controls.Add(this.dtpBirthStart);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(6, 231);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(710, 211);
-            this.panel5.TabIndex = 17;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(188, 143);
-            this.label14.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(49, 40);
-            this.label14.TabIndex = 15;
-            this.label14.Text = "到";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(188, 83);
-            this.label13.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(49, 40);
-            this.label13.TabIndex = 14;
-            this.label13.Text = "從";
-            // 
-            // dtpBirthEnd
-            // 
-            this.dtpBirthEnd.Location = new System.Drawing.Point(249, 136);
-            this.dtpBirthEnd.Margin = new System.Windows.Forms.Padding(6);
-            this.dtpBirthEnd.Name = "dtpBirthEnd";
-            this.dtpBirthEnd.Size = new System.Drawing.Size(292, 50);
-            this.dtpBirthEnd.TabIndex = 13;
-            // 
-            // dtpBirthStart
-            // 
-            this.dtpBirthStart.Location = new System.Drawing.Point(249, 76);
-            this.dtpBirthStart.Margin = new System.Windows.Forms.Padding(6);
-            this.dtpBirthStart.Name = "dtpBirthStart";
-            this.dtpBirthStart.Size = new System.Drawing.Size(292, 50);
-            this.dtpBirthStart.TabIndex = 12;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.DarkSalmon;
-            this.panel6.Controls.Add(this.label12);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel6.Location = new System.Drawing.Point(0, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(710, 57);
-            this.panel6.TabIndex = 13;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label12.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label12.Location = new System.Drawing.Point(0, 0);
-            this.label12.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(145, 40);
-            this.label12.TabIndex = 4;
-            this.label12.Text = "搜尋結果";
-            // 
-            // panel7
-            // 
-            this.panel7.BackColor = System.Drawing.Color.DarkSalmon;
-            this.panel7.Controls.Add(this.label10);
-            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel7.Location = new System.Drawing.Point(0, 0);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(710, 57);
-            this.panel7.TabIndex = 16;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label10.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label10.Location = new System.Drawing.Point(0, 0);
-            this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(209, 40);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "生日區間指定";
-            // 
-            // panel8
-            // 
-            this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel8.Location = new System.Drawing.Point(0, 57);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(67, 300);
-            this.panel8.TabIndex = 14;
-            // 
-            // panel9
-            // 
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel9.Location = new System.Drawing.Point(643, 57);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(67, 300);
-            this.panel9.TabIndex = 15;
-            // 
-            // panel10
-            // 
-            this.panel10.BackColor = System.Drawing.Color.DarkSalmon;
-            this.panel10.Controls.Add(this.label6);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(0, 0);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(710, 57);
-            this.panel10.TabIndex = 17;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label6.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.label6.Location = new System.Drawing.Point(0, 0);
-            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(241, 40);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "欄位關鍵字搜尋";
+            this.panel11.Controls.Add(this.btnReload);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel11.Location = new System.Drawing.Point(6, 49);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(1491, 84);
+            this.panel11.TabIndex = 1;
             // 
             // FormCustomers
             // 
@@ -771,22 +803,23 @@
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox3.ResumeLayout(false);
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel7.ResumeLayout(false);
-            this.panel7.PerformLayout();
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
+            this.panel11.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -845,5 +878,7 @@
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnReload;
+        private System.Windows.Forms.Panel panel11;
     }
 }

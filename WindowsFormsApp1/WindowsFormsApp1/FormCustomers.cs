@@ -95,7 +95,7 @@ namespace WindowsFormsApp1
         {
             SqlConnection con = new SqlConnection(strMyPJDBConnectString);
             con.Open();
-            string strSQL = "select ID as 會員編號, 姓名, 電話, 地址, 生日, Email as 電子郵件 from Customers";
+            string strSQL = "select ID as 會員編號, 姓名, 電話, 地址, 生日, Email as 電子郵件, Point as 會員點數 from Customers";
             SqlCommand cmd = new SqlCommand(strSQL, con);
             SqlDataReader reader = cmd.ExecuteReader();
 
@@ -276,6 +276,44 @@ namespace WindowsFormsApp1
         }
 
         private void panel5_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void btnNew_Click(object sender, EventArgs e)
+        {
+            if ((txtName.Text != "") && (txtPhone.Text != "") && (txtAddr.Text != "") && (txtEmail.Text != "") && (txtPoint.Text != "") )
+            {
+                SqlConnection con = new SqlConnection(strMyPJDBConnectString);
+                con.Open();
+                string strSQL = "insert into Customers values (@NewName,@NewPhone,@NewAddress,@NewEmail,@NewBirth,@NewPoints);";
+                SqlCommand cmd = new SqlCommand(strSQL, con);
+                cmd.Parameters.AddWithValue("@NewName", txtName.Text);
+                cmd.Parameters.AddWithValue("@NewPhone", txtPhone.Text);
+                cmd.Parameters.AddWithValue("@NewAddress", txtAddr.Text);
+                cmd.Parameters.AddWithValue("@NewEmail", txtEmail.Text);
+                cmd.Parameters.AddWithValue("@NewBirth", dtpBirth.Value);
+                int intPoints = 0;
+                Int32.TryParse(txtPoint.Text, out intPoints);
+                cmd.Parameters.AddWithValue("@NewPoints", intPoints);
+
+                int rows = cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show($"({rows}個資料列受到影響)");
+            }
+            else
+            {
+                MessageBox.Show("請務必填寫完整資料");
+            }
+        }
+
+        private void btnReload_Click(object sender, EventArgs e)
+        {
+            BuildCustomerList();
+
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
         {
 
         }
