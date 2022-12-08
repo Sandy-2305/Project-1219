@@ -15,6 +15,17 @@ namespace WindowsFormsApp1
         public FormOrder()
         {
             InitializeComponent();
+            lblCustomer.Text= $"訂購人：{GlobalVar.strLoginName}";
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel7_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

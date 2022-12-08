@@ -21,6 +21,7 @@ namespace WindowsFormsApp1
         {
             txtAccount.Text = "";
             txtPassword.Text = "";
+            
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -72,7 +73,7 @@ namespace WindowsFormsApp1
 
         private void FormLogin_FormClosed(object sender, FormClosedEventArgs e)
         {
-
+           
         }
 
         private void FormLogin_FormClosing(object sender, FormClosingEventArgs e)
@@ -102,7 +103,11 @@ namespace WindowsFormsApp1
         {
 
         }
-    
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 
 }

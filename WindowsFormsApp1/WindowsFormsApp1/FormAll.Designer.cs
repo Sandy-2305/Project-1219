@@ -33,6 +33,7 @@
             this.lblLoginInfo = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnOrder = new System.Windows.Forms.Button();
             this.btnCustomer = new System.Windows.Forms.Button();
             this.btnIndex = new System.Windows.Forms.Button();
             this.btnFormPView = new System.Windows.Forms.Button();
@@ -90,6 +91,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Wheat;
+            this.panel1.Controls.Add(this.btnOrder);
             this.panel1.Controls.Add(this.btnCustomer);
             this.panel1.Controls.Add(this.btnIndex);
             this.panel1.Controls.Add(this.btnFormPView);
@@ -98,6 +100,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(245, 906);
             this.panel1.TabIndex = 3;
+            // 
+            // btnOrder
+            // 
+            this.btnOrder.BackColor = System.Drawing.Color.Maroon;
+            this.btnOrder.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnOrder.FlatAppearance.BorderSize = 0;
+            this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrder.Font = new System.Drawing.Font("微軟正黑體", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnOrder.ForeColor = System.Drawing.Color.White;
+            this.btnOrder.Location = new System.Drawing.Point(0, 243);
+            this.btnOrder.Name = "btnOrder";
+            this.btnOrder.Size = new System.Drawing.Size(245, 62);
+            this.btnOrder.TabIndex = 3;
+            this.btnOrder.Text = "購買餐點";
+            this.btnOrder.UseVisualStyleBackColor = false;
+            this.btnOrder.Click += new System.EventHandler(this.btnOrder_Click);
             // 
             // btnCustomer
             // 
@@ -180,7 +198,9 @@
             this.Controls.Add(this.panel5);
             this.Name = "FormAll";
             this.Text = "首頁";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormAll_Load);
+            this.Shown += new System.EventHandler(this.FormAll_Shown);
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -202,5 +222,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnIndex;
         private System.Windows.Forms.Button btnCustomer;
+        private System.Windows.Forms.Button btnOrder;
     }
 }

@@ -158,5 +158,10 @@ namespace WindowsFormsApp1
                 MessageBox.Show("必須填寫所有欄位");
             }
         }
+
+        private void cBoxProductType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -19,13 +19,14 @@ namespace WindowsFormsApp1
 
         private void FormAll_Load(object sender, EventArgs e)
         {
-            
+
             FormLogin myLogin = new FormLogin();
             myLogin.ShowDialog();
 
             lblTitle.Text = "首頁";
 
             lblLoginInfo.Text = $"ID：{GlobalVar.memberID}  姓名：{GlobalVar.strLoginName}";
+
         }
 
         private void btnFormPView_Click(object sender, EventArgs e)
@@ -39,8 +40,12 @@ namespace WindowsFormsApp1
             btnCustomer.BackColor = Color.Maroon;
             btnCustomer.ForeColor = Color.White;
 
+            btnOrder.BackColor = Color.Maroon;
+            btnOrder.ForeColor = Color.White;
+
+
             lblTitle.Text = "商品列表";
-            
+           
             FormProductsView FormProduct = new FormProductsView();
             FromShow(FormProduct);
 
@@ -89,6 +94,10 @@ namespace WindowsFormsApp1
             btnCustomer.BackColor = Color.Maroon;
             btnCustomer.ForeColor = Color.White;
 
+            btnOrder.BackColor = Color.Maroon;
+            btnOrder.ForeColor = Color.White;
+
+
 
             lblTitle.Text = "首頁";
 
@@ -107,10 +116,38 @@ namespace WindowsFormsApp1
             btnCustomer.BackColor = Color.OldLace;
             btnCustomer.ForeColor = Color.Maroon;
 
+            btnOrder.BackColor = Color.Maroon;
+            btnOrder.ForeColor = Color.White;
+
             lblTitle.Text = "顧客資料";
 
             FormCustomers FormView = new FormCustomers();
             FromShow(FormView);
+        }
+
+        private void btnOrder_Click(object sender, EventArgs e)
+        {
+            btnOrder.BackColor = Color.OldLace;
+            btnOrder.ForeColor = Color.Maroon;
+
+            btnIndex.BackColor = Color.Maroon;
+            btnIndex.ForeColor = Color.White;
+
+            btnFormPView.BackColor = Color.Maroon;
+            btnFormPView.ForeColor = Color.White;
+
+            btnCustomer.BackColor = Color.Maroon;
+            btnCustomer.ForeColor = Color.White;
+
+            lblTitle.Text = "訂購餐點";
+
+            FormOrder FormView = new FormOrder();
+            FromShow(FormView);
+        }
+
+        private void FormAll_Shown(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -23,7 +23,6 @@ C:\Git\Project-1219\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1
 C:\Git\Project-1219\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormProductsView.resources
 C:\Git\Project-1219\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormProductDetail.resources
 C:\Git\Project-1219\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormCustomers.resources
-C:\Git\Project-1219\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormCustomersAlter.resources
 C:\Git\Project-1219\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormOrder.resources
 C:\Git\Project-1219\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormOrderEdit.resources
 C:\Git\Project-1219\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.FormAll.resources
