@@ -64,10 +64,11 @@ namespace WindowsFormsApp1
 
         private void cBoxProductType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            listView1.Clear();
+            
             listProductID.Clear();
             listProductName.Clear();
             listProductPrice.Clear();
+            listView1.Clear();
             listView1.LargeImageList = null;
             listView1.SmallImageList = null;
             listView1.View = View.Details;
@@ -102,8 +103,7 @@ namespace WindowsFormsApp1
             {
                 ListViewItem item = new ListViewItem();
                 listView1.Font = new Font("微軟正黑體", 12, FontStyle.Regular);
-
-                item.SubItems.Add(listProductName[t]);
+                item.Text = listProductName[t].ToString();
                 item.SubItems.Add(listProductPrice[t].ToString());
                 item.Tag = listProductID[t];
 
