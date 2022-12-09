@@ -16,15 +16,12 @@ namespace WindowsFormsApp1
     {
         SqlConnectionStringBuilder scsb;
         string strMyPJDBConnectString = "";
-        List<string> listDrink = new List<string>();
-        List<string> listFood = new List<string>();
-        List<int> listDrinkPrice = new List<int>();
-        List<int> listFoodPrice = new List<int>();
+ 
         List<string> listSweet = new List<string>();
         List<string> listIce = new List<string>();
-        List<string> listProductName = new List<string>();  // list產品名稱
-        List<int> listProductPrice = new List<int>();       // list產品價格
-        List<int> listProductID = new List<int>();          // list產品ID
+        List<string> listProductName = new List<string>();  
+        List<int> listProductPrice = new List<int>();       
+        List<int> listProductID = new List<int>();          
 
         int Amount = 0;
         int Price = 0;
@@ -40,30 +37,6 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-        private void listProducts()
-        {
-            listView1.Clear();
-            listView1.LargeImageList = null;
-            listView1.SmallImageList = null;
-            listView1.View = View.Details;
-            listView1.Columns.Add("商品名稱", 200);
-            listView1.Columns.Add("商品價格", 100);
-            listView1.FullRowSelect = true;
-            listView1.GridLines = true;
-
-            for (int i = 0; i < listProductID.Count; i += 1)
-            {
-                ListViewItem item = new ListViewItem();
-                listView1.Font = new Font("微軟正黑體", 12, FontStyle.Regular);
-              
-                item.SubItems.Add(listProductName[i]);
-                item.SubItems.Add(listProductPrice[i].ToString());
-                item.Tag = listProductID[i];
-
-                listView1.Items.Add(item);
-            }
-        }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
@@ -91,6 +64,18 @@ namespace WindowsFormsApp1
 
         private void cBoxProductType_SelectedIndexChanged(object sender, EventArgs e)
         {
+            listView1.Clear();
+            listProductID.Clear();
+            listProductName.Clear();
+            listProductPrice.Clear();
+            listView1.LargeImageList = null;
+            listView1.SmallImageList = null;
+            listView1.View = View.Details;
+            listView1.Columns.Add("商品名稱", 100);
+            listView1.Columns.Add("商品價格", 100);
+            listView1.FullRowSelect = true;
+            listView1.GridLines = true;
+
             string Type = cBoxProductType.SelectedItem.ToString();
             SqlConnection con = new SqlConnection(strMyPJDBConnectString);
             con.Open();
@@ -104,14 +89,26 @@ namespace WindowsFormsApp1
 
             while (reader.Read())
             {
-                listProductID.Add((int)reader["ProductID"]);
                 listProductName.Add(reader["ProductName"].ToString());
                 listProductPrice.Add((int)reader["ProductPrice"]);
+                listProductID.Add((int)reader["ProductID"]);
+                i += 1;
             }
-
             Console.WriteLine($"讀取{i}筆資料");
             reader.Close();
             con.Close();
+
+            for (int t = 0; t < listProductID.Count; t += 1)
+            {
+                ListViewItem item = new ListViewItem();
+                listView1.Font = new Font("微軟正黑體", 12, FontStyle.Regular);
+
+                item.SubItems.Add(listProductName[t]);
+                item.SubItems.Add(listProductPrice[t].ToString());
+                item.Tag = listProductID[t];
+
+                listView1.Items.Add(item);
+            }
         }
        
         private void FormOrder_Load(object sender, EventArgs e)
