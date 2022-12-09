@@ -50,7 +50,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxAmount = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.listBoxProduct = new System.Windows.Forms.ListBox();
             this.panel14 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.cBoxProductType = new System.Windows.Forms.ComboBox();
@@ -63,6 +62,7 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.listView1 = new System.Windows.Forms.ListView();
             this.panel1.SuspendLayout();
             this.panel16.SuspendLayout();
             this.GBInOut.SuspendLayout();
@@ -288,10 +288,10 @@
             // 
             // panel13
             // 
+            this.panel13.Controls.Add(this.listView1);
             this.panel13.Controls.Add(this.label2);
             this.panel13.Controls.Add(this.textBoxAmount);
             this.panel13.Controls.Add(this.label3);
-            this.panel13.Controls.Add(this.listBoxProduct);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel13.Location = new System.Drawing.Point(0, 100);
             this.panel13.Name = "panel13";
@@ -326,15 +326,6 @@
             this.label3.Size = new System.Drawing.Size(131, 47);
             this.label3.TabIndex = 72;
             this.label3.Text = "品項：";
-            // 
-            // listBoxProduct
-            // 
-            this.listBoxProduct.FormattingEnabled = true;
-            this.listBoxProduct.ItemHeight = 35;
-            this.listBoxProduct.Location = new System.Drawing.Point(31, 86);
-            this.listBoxProduct.Name = "listBoxProduct";
-            this.listBoxProduct.Size = new System.Drawing.Size(499, 354);
-            this.listBoxProduct.TabIndex = 73;
             // 
             // panel14
             // 
@@ -464,6 +455,15 @@
             this.panel2.Size = new System.Drawing.Size(56, 1356);
             this.panel2.TabIndex = 45;
             // 
+            // listView1
+            // 
+            this.listView1.HideSelection = false;
+            this.listView1.Location = new System.Drawing.Point(31, 78);
+            this.listView1.Name = "listView1";
+            this.listView1.Size = new System.Drawing.Size(499, 360);
+            this.listView1.TabIndex = 73;
+            this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
             // FormOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
@@ -519,7 +519,6 @@
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ListBox listBoxProduct;
         private System.Windows.Forms.Panel panel14;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cBoxProductType;
@@ -536,5 +535,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.ListView listView1;
     }
 }
