@@ -275,6 +275,7 @@
             this.listResult.Name = "listResult";
             this.listResult.Size = new System.Drawing.Size(576, 258);
             this.listResult.TabIndex = 12;
+            this.listResult.SelectedIndexChanged += new System.EventHandler(this.listResult_SelectedIndexChanged);
             // 
             // panel13
             // 

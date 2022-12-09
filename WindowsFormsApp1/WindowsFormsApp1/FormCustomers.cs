@@ -489,5 +489,37 @@ namespace WindowsFormsApp1
             reader.Close();
             con.Close();
         }
+
+        private void listResult_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (listResult.SelectedIndex >= 0)
+            {
+                int intSelectedID = SearchIDs[listResult.SelectedIndex];
+
+                SqlConnection con = new SqlConnection(strMyPJDBConnectString);
+                con.Open();
+                string strSQL = "select * from dbo.Customers where id = @searchID;";
+                SqlCommand cmd = new SqlCommand(strSQL, con);
+                cmd.Parameters.AddWithValue("@searchID", intSelectedID);
+                SqlDataReader reader = cmd.ExecuteReader();
+
+                if (reader.Read() == true)
+                {
+                    lblID.Text = reader["ID"].ToString();
+                    txtName.Text = reader["姓名"].ToString();
+                    txtPhone.Text = reader["電話"].ToString();
+                    txtAddr.Text = reader["地址"].ToString();
+                    txtEmail.Text = reader["Email"].ToString();
+                    txtPoint.Text = reader["Point"].ToString();
+                    dtpBirth.Value = Convert.ToDateTime(reader["生日"]);
+                    
+                }
+                else
+                {
+                    MessageBox.Show("查無此人");
+                }
+            }
+           
+        }
     }
 }
