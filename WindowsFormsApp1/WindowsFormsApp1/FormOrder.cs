@@ -85,6 +85,16 @@ namespace WindowsFormsApp1
             cmd.Parameters.AddWithValue("@SelectType", Type);
             SqlDataReader reader = cmd.ExecuteReader();
 
+            if (Type == "點心")
+            {
+                panel4.Hide();
+                cBoxSweet.SelectedIndex= -1;
+                cBoxIce.SelectedIndex = -1;
+            }
+            if(Type == "飲品")
+            {
+                panel4.Show();
+            }
 
             int i = 0;
 
@@ -118,6 +128,9 @@ namespace WindowsFormsApp1
             scsb.InitialCatalog = "MyPJDB"; //資料庫名稱
             scsb.IntegratedSecurity = true; //windows驗證
             strMyPJDBConnectString = scsb.ToString();
+
+            lblCustomer.Text = $"訂購顧客姓名：{GlobalVar.strLoginName}";
+            
 
             listSweet.Add("正常");
             listSweet.Add("少糖");
