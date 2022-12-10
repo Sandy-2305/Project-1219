@@ -6,8 +6,10 @@ using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WindowsFormsApp1
@@ -54,29 +56,17 @@ namespace WindowsFormsApp1
 
         private void radioButtonTakeOut_CheckedChanged(object sender, EventArgs e)
         {
-
+            isTakeOut = true;
         }
 
         private void radioButtonForHere_CheckedChanged(object sender, EventArgs e)
         {
-
+            isTakeOut = false;
         }
 
         private void cBoxProductType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
-            listProductID.Clear();
-            listProductName.Clear();
-            listProductPrice.Clear();
-            listView1.Clear();
-            listView1.LargeImageList = null;
-            listView1.SmallImageList = null;
-            listView1.View = View.Details;
-            listView1.Columns.Add("商品名稱", 100);
-            listView1.Columns.Add("商品價格", 100);
-            listView1.FullRowSelect = true;
-            listView1.GridLines = true;
-
+            listBox1.Items.Clear();
             string Type = cBoxProductType.SelectedItem.ToString();
             SqlConnection con = new SqlConnection(strMyPJDBConnectString);
             con.Open();
@@ -84,43 +74,34 @@ namespace WindowsFormsApp1
             SqlCommand cmd = new SqlCommand(strSQL, con);
             cmd.Parameters.AddWithValue("@SelectType", Type);
             SqlDataReader reader = cmd.ExecuteReader();
+            int count = 0;
 
             if (Type == "點心")
             {
                 panel4.Hide();
-                cBoxSweet.SelectedIndex= -1;
+                cBoxSweet.SelectedIndex = -1;
                 cBoxIce.SelectedIndex = -1;
             }
-            if(Type == "飲品")
+            if (Type == "飲品")
             {
                 panel4.Show();
             }
-
-            int i = 0;
 
             while (reader.Read())
             {
                 listProductName.Add(reader["ProductName"].ToString());
                 listProductPrice.Add((int)reader["ProductPrice"]);
                 listProductID.Add((int)reader["ProductID"]);
-                i += 1;
+                listBox1.Items.Add($"{reader["ProductName"].ToString()} {(int)reader["ProductPrice"]}");
+                count += 1;
             }
-            Console.WriteLine($"讀取{i}筆資料");
+
+            Console.WriteLine($"讀取{count}筆資料");
             reader.Close();
             con.Close();
-
-            for (int t = 0; t < listProductID.Count; t += 1)
-            {
-                ListViewItem item = new ListViewItem();
-                listView1.Font = new Font("微軟正黑體", 12, FontStyle.Regular);
-                item.Text = listProductName[t].ToString();
-                item.SubItems.Add(listProductPrice[t].ToString());
-                item.Tag = listProductID[t];
-
-                listView1.Items.Add(item);
-            }
+           
         }
-       
+
         private void FormOrder_Load(object sender, EventArgs e)
         {
             scsb = new SqlConnectionStringBuilder();
@@ -157,15 +138,44 @@ namespace WindowsFormsApp1
             }
 
 
+        }
+        private void total()
+        {
+            Int32.TryParse(textBoxAmount.Text, out int amount);
+            if (amount > 10)
+            {
+                MessageBox.Show("一筆訂單的購買數量不可以超過10！");
+            }
+            if (amount > 0)
+            {
+                All = Price * amount;
+                
+                if (isBag == true)
+                {
+                    All += 2;
+                }
+                lblPrice.Text = $"{All}";
+            }
+           
 
+        }
+     
+        private void btnBuy_Click(object sender, EventArgs e)
+        {
+            total();
+            
+        }
 
+        private void checkBoxBag_CheckedChanged(object sender, EventArgs e)
+        {
+            isBag = checkBoxBag.Checked;
 
+            total();
+        }
 
-
-
-
-
-
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

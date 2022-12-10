@@ -34,6 +34,12 @@
             this.radioButtonForHere = new System.Windows.Forms.RadioButton();
             this.radioButtonTakeOut = new System.Windows.Forms.RadioButton();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.cBoxIce = new System.Windows.Forms.ComboBox();
+            this.cBoxSweet = new System.Windows.Forms.ComboBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
             this.panel17 = new System.Windows.Forms.Panel();
             this.panel11 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
@@ -41,7 +47,6 @@
             this.lblPrice = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxAmount = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -56,16 +61,12 @@
             this.panel9 = new System.Windows.Forms.Panel();
             this.lblCustomer = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.cBoxIce = new System.Windows.Forms.ComboBox();
-            this.cBoxSweet = new System.Windows.Forms.ComboBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.listBox1 = new System.Windows.Forms.ListBox();
             this.panel1.SuspendLayout();
             this.panel16.SuspendLayout();
             this.GBInOut.SuspendLayout();
             this.panel10.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -73,7 +74,6 @@
             this.panel14.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel9.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -153,6 +153,71 @@
             this.panel10.Size = new System.Drawing.Size(578, 673);
             this.panel10.TabIndex = 80;
             // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.cBoxIce);
+            this.panel4.Controls.Add(this.cBoxSweet);
+            this.panel4.Controls.Add(this.label9);
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(578, 673);
+            this.panel4.TabIndex = 0;
+            this.panel4.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("微軟正黑體", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label4.ForeColor = System.Drawing.Color.Brown;
+            this.label4.Location = new System.Drawing.Point(59, 54);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(242, 47);
+            this.label4.TabIndex = 82;
+            this.label4.Text = "客製化選項：";
+            // 
+            // cBoxIce
+            // 
+            this.cBoxIce.Font = new System.Drawing.Font("微軟正黑體", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.cBoxIce.FormattingEnabled = true;
+            this.cBoxIce.Location = new System.Drawing.Point(320, 285);
+            this.cBoxIce.Name = "cBoxIce";
+            this.cBoxIce.Size = new System.Drawing.Size(120, 55);
+            this.cBoxIce.TabIndex = 86;
+            // 
+            // cBoxSweet
+            // 
+            this.cBoxSweet.Font = new System.Drawing.Font("微軟正黑體", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.cBoxSweet.FormattingEnabled = true;
+            this.cBoxSweet.Location = new System.Drawing.Point(320, 187);
+            this.cBoxSweet.Name = "cBoxSweet";
+            this.cBoxSweet.Size = new System.Drawing.Size(120, 55);
+            this.cBoxSweet.TabIndex = 85;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("微軟正黑體", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label9.ForeColor = System.Drawing.Color.Brown;
+            this.label9.Location = new System.Drawing.Point(207, 195);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(94, 47);
+            this.label9.TabIndex = 84;
+            this.label9.Text = "甜度";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("微軟正黑體", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label8.ForeColor = System.Drawing.Color.Brown;
+            this.label8.Location = new System.Drawing.Point(207, 293);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(94, 47);
+            this.label8.TabIndex = 83;
+            this.label8.Text = "冰塊";
+            // 
             // panel17
             // 
             this.panel17.Dock = System.Windows.Forms.DockStyle.Top;
@@ -221,7 +286,7 @@
             // 
             // panel13
             // 
-            this.panel13.Controls.Add(this.listView1);
+            this.panel13.Controls.Add(this.listBox1);
             this.panel13.Controls.Add(this.label2);
             this.panel13.Controls.Add(this.textBoxAmount);
             this.panel13.Controls.Add(this.label3);
@@ -230,15 +295,6 @@
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(746, 673);
             this.panel13.TabIndex = 73;
-            // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(80, 127);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(635, 360);
-            this.listView1.TabIndex = 73;
-            this.listView1.UseCompatibleStateImageBehavior = false;
             // 
             // label2
             // 
@@ -327,6 +383,7 @@
             this.btnBuy.TabIndex = 63;
             this.btnBuy.Text = "確認購買";
             this.btnBuy.UseVisualStyleBackColor = false;
+            this.btnBuy.Click += new System.EventHandler(this.btnBuy_Click);
             // 
             // checkBoxBag
             // 
@@ -338,6 +395,7 @@
             this.checkBoxBag.TabIndex = 78;
             this.checkBoxBag.Text = "是否需要購物袋";
             this.checkBoxBag.UseVisualStyleBackColor = true;
+            this.checkBoxBag.CheckedChanged += new System.EventHandler(this.checkBoxBag_CheckedChanged);
             // 
             // panel5
             // 
@@ -388,70 +446,15 @@
             this.panel2.Size = new System.Drawing.Size(335, 1356);
             this.panel2.TabIndex = 45;
             // 
-            // panel4
+            // listBox1
             // 
-            this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.cBoxIce);
-            this.panel4.Controls.Add(this.cBoxSweet);
-            this.panel4.Controls.Add(this.label9);
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(0, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(578, 673);
-            this.panel4.TabIndex = 0;
-            this.panel4.Visible = false;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("微軟正黑體", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label4.ForeColor = System.Drawing.Color.Brown;
-            this.label4.Location = new System.Drawing.Point(59, 54);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(242, 47);
-            this.label4.TabIndex = 82;
-            this.label4.Text = "客製化選項：";
-            // 
-            // cBoxIce
-            // 
-            this.cBoxIce.Font = new System.Drawing.Font("微軟正黑體", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.cBoxIce.FormattingEnabled = true;
-            this.cBoxIce.Location = new System.Drawing.Point(320, 285);
-            this.cBoxIce.Name = "cBoxIce";
-            this.cBoxIce.Size = new System.Drawing.Size(120, 55);
-            this.cBoxIce.TabIndex = 86;
-            // 
-            // cBoxSweet
-            // 
-            this.cBoxSweet.Font = new System.Drawing.Font("微軟正黑體", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.cBoxSweet.FormattingEnabled = true;
-            this.cBoxSweet.Location = new System.Drawing.Point(320, 187);
-            this.cBoxSweet.Name = "cBoxSweet";
-            this.cBoxSweet.Size = new System.Drawing.Size(120, 55);
-            this.cBoxSweet.TabIndex = 85;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("微軟正黑體", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label9.ForeColor = System.Drawing.Color.Brown;
-            this.label9.Location = new System.Drawing.Point(207, 195);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(94, 47);
-            this.label9.TabIndex = 84;
-            this.label9.Text = "甜度";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("微軟正黑體", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label8.ForeColor = System.Drawing.Color.Brown;
-            this.label8.Location = new System.Drawing.Point(207, 293);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(94, 47);
-            this.label8.TabIndex = 83;
-            this.label8.Text = "冰塊";
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ItemHeight = 35;
+            this.listBox1.Location = new System.Drawing.Point(80, 115);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(635, 389);
+            this.listBox1.TabIndex = 87;
+            this.listBox1.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
             // 
             // FormOrder
             // 
@@ -469,6 +472,8 @@
             this.GBInOut.ResumeLayout(false);
             this.GBInOut.PerformLayout();
             this.panel10.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel11.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
@@ -481,8 +486,6 @@
             this.panel7.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -516,12 +519,12 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox cBoxIce;
         private System.Windows.Forms.ComboBox cBoxSweet;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ListBox listBox1;
     }
 }
