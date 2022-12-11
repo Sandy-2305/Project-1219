@@ -28,9 +28,9 @@ namespace WindowsFormsApp1
         int Amount = 0;
         int Price = 0;
         int All = 0;
-        string Drink = "";
-        string Sweet = "";
+        string Product = "";
         string Ice= "";
+        string Sweet = "";
         bool isTakeOut = false;
         bool isBag = false;
         
@@ -141,14 +141,14 @@ namespace WindowsFormsApp1
         }
         private void total()
         {
-            Int32.TryParse(textBoxAmount.Text, out int amount);
-            if (amount > 10)
+            Int32.TryParse(textBoxAmount.Text, out int Amount);
+            if (Amount > 10)
             {
                 MessageBox.Show("一筆訂單的購買數量不可以超過10！");
             }
-            if (amount > 0)
+            if (Amount > 0)
             {
-                All = Price * amount;
+                All = Price * Amount;
                 
                 if (isBag == true)
                 {
@@ -163,7 +163,32 @@ namespace WindowsFormsApp1
         private void btnBuy_Click(object sender, EventArgs e)
         {
             total();
-            
+            if (Amount > 0)
+            {
+             
+                SqlConnection con = new SqlConnection(strMyPJDBConnectString);
+                con.Open();
+                string strSQL = "insert into OrderList values(@NewCustomerName,@NewProductName,@NewPrice,@NewAmount,@NewNeeds,@NewBuyBag,@NewToGo,@NewTotalPrice)";
+                SqlCommand cmd = new SqlCommand(strSQL, con);
+                cmd.Parameters.AddWithValue("@NewProductName", Product);
+                cmd.Parameters.AddWithValue("@NewPrice", Price);
+                cmd.Parameters.AddWithValue("@NewTotalPrice", All);
+                cmd.Parameters.AddWithValue("@NewAmount", Amount);
+                cmd.Parameters.AddWithValue("@NewNeeds", Sweet+Ice);
+                cmd.Parameters.AddWithValue("@NewCustomerName", GlobalVar.strLoginName); ;
+                cmd.Parameters.AddWithValue("@NewToGo", isTakeOut);
+                cmd.Parameters.AddWithValue("@NewBuyBag", isBag);
+                
+                int rows = cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show($"訂購成功, 共{rows}筆 !");
+            }
+            else
+            {
+                MessageBox.Show("訂購人必填, 至少購買一杯 !");
+            }
+          
+
         }
 
         private void checkBoxBag_CheckedChanged(object sender, EventArgs e)
@@ -175,7 +200,41 @@ namespace WindowsFormsApp1
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            
+
+            if (listBox1.SelectedIndex >= 0)
+            {
+                Product = listProductName[listBox1.SelectedIndex];
+                Price = listProductPrice[listBox1.SelectedIndex];
+
+                lblPrice.Text = $"{Price}";
+                total();
+            }
+        }
+
+        private void cBoxSweet_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Sweet = cBoxSweet.SelectedItem.ToString();
+        }
+
+        private void cBoxIce_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Ice = cBoxIce.SelectedItem.ToString();
+        }
+
+        private void textBoxAmount_TextChanged(object sender, EventArgs e)
+        {
+            if (textBoxAmount.Text.Length > 0)
+            {
+                bool isNum = Int32.TryParse(textBoxAmount.Text, out Amount);
+                if (isNum)
+                {
+                    total();
+                }
+                else
+                {
+                    MessageBox.Show("數量輸入錯誤");
+                }
+            }
         }
     }
 }

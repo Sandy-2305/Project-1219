@@ -63,6 +63,10 @@ namespace WindowsFormsApp1
             strMyPJDBConnectionString = scsb.ToString();
             SQL();
             picturemode();
+            if (GlobalVar.intPerms == 1)
+            {
+                btnNewProduct.Hide();
+            }
         }
 
         private void btnPicMode_Click(object sender, EventArgs e)
@@ -139,13 +143,18 @@ namespace WindowsFormsApp1
             {
                 picturemode();
             }
+            MessageBox.Show("重新載入成功");
         }
 
         private void listViewProduct_ItemActivate(object sender, EventArgs e)
         {
-            FormProductDetail ProductDetail = new FormProductDetail();
-            ProductDetail.ID = (int)listViewProduct.SelectedItems[0].Tag;
-            ProductDetail.ShowDialog();
+            if (GlobalVar.intPerms == 10)
+            {
+                FormProductDetail ProductDetail = new FormProductDetail();
+                ProductDetail.ID = (int)listViewProduct.SelectedItems[0].Tag;
+                ProductDetail.ShowDialog();
+            }
+           
         }
        
         private void btnListMode_Click(object sender, EventArgs e)

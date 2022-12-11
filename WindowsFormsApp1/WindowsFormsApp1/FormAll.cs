@@ -26,6 +26,14 @@ namespace WindowsFormsApp1
             lblTitle.Text = "首頁";
 
             lblLoginInfo.Text = $"ID：{GlobalVar.memberID}  姓名：{GlobalVar.strLoginName}";
+            if (GlobalVar.strLoginName != "")
+            {
+                btnLogOut.Show();
+            }
+            if (GlobalVar.intPerms ==1)
+            {
+                btnCustomer.Hide();
+            }
 
         }
 
@@ -148,6 +156,11 @@ namespace WindowsFormsApp1
         private void FormAll_Shown(object sender, EventArgs e)
         {
             
+        }
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
         }
     }
 }
