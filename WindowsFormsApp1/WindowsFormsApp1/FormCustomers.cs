@@ -17,6 +17,8 @@ namespace WindowsFormsApp1
     {
         string strMyPJDBConnectString = "";
         List<int> SearchIDs = new List<int>();
+
+
         public FormCustomers()
         {
             InitializeComponent();
@@ -34,7 +36,6 @@ namespace WindowsFormsApp1
             comboBox1.Items.Add("地址");
             comboBox1.Items.Add("Email");
             comboBox1.SelectedIndex = 0;
-
 
             BuildCustomerList();
 
@@ -173,47 +174,48 @@ namespace WindowsFormsApp1
             txtAddr.Clear();
             txtPoint.Clear();
             dtpBirth.Value = DateTime.Now;
-
         }
+
+
+
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex >= 0)
             {
-                if (e.RowIndex >= 0)
+                string strSelectedID = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                int intSelectedID = 0;
+                bool isID = Int32.TryParse(strSelectedID, out intSelectedID);
+
+                if (isID == true)
                 {
-                    string strSelectedID = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
-                    int intSelectedID = 0;
-                    bool isID = Int32.TryParse(strSelectedID, out intSelectedID);
+                    SqlConnection con = new SqlConnection(strMyPJDBConnectString);
+                    con.Open();
+                    string strSQL = "select * from Customers where ID = @SearchID;";
+                    SqlCommand cmd = new SqlCommand(strSQL, con);
+                    cmd.Parameters.AddWithValue("@SearchID", intSelectedID);
+                    SqlDataReader reader = cmd.ExecuteReader();
 
-                    if (isID == true)
+                    if (reader.Read() == true)
                     {
-                        SqlConnection con = new SqlConnection(strMyPJDBConnectString);
-                        con.Open();
-                        string strSQL = "select * from Customers where ID = @SearchID;";
-                        SqlCommand cmd = new SqlCommand(strSQL, con);
-                        cmd.Parameters.AddWithValue("@SearchID", intSelectedID);
-                        SqlDataReader reader = cmd.ExecuteReader();
+                        lblID.Text = reader["ID"].ToString();
+                        txtName.Text = reader["姓名"].ToString();
+                        txtPhone.Text = reader["電話"].ToString();
+                        txtAddr.Text = reader["地址"].ToString();
+                        txtEmail.Text = reader["Email"].ToString();
+                        txtPoint.Text = reader["Point"].ToString();
+                        dtpBirth.Value = Convert.ToDateTime(reader["生日"]);
 
-                        if (reader.Read() == true)
-                        {
-                            lblID.Text = reader["ID"].ToString();
-                            txtName.Text = reader["姓名"].ToString();
-                            txtPhone.Text = reader["電話"].ToString();
-                            txtAddr.Text = reader["地址"].ToString();
-                            txtEmail.Text = reader["Email"].ToString();
-                            txtPoint.Text = reader["Point"].ToString();
-                            dtpBirth.Value = Convert.ToDateTime(reader["生日"]);
-
-                        }
-                        else
-                        {
-                            MessageBox.Show("查無此人");
-                            Clean();
-                        }
-                        reader.Close();
-                        con.Close();
                     }
-                }
+                    else
+                    {
+                        MessageBox.Show("查無此人");
+                        Clean();
+                    }
+                    reader.Close();
+                    con.Close();
+                    }
             }
+            
         }
 
         private void btnClear_Click(object sender, EventArgs e)

@@ -30,611 +30,753 @@
         {
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.btnReload = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.lst搜尋結果 = new System.Windows.Forms.ListBox();
-            this.gb婚姻狀態 = new System.Windows.Forms.GroupBox();
-            this.rdo全部 = new System.Windows.Forms.RadioButton();
-            this.rdo已婚 = new System.Windows.Forms.RadioButton();
-            this.rdo單身 = new System.Windows.Forms.RadioButton();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.label10 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.dtp生日結束 = new System.Windows.Forms.DateTimePicker();
-            this.dtp生日開始 = new System.Windows.Forms.DateTimePicker();
-            this.btn搜尋欄位關鍵字 = new System.Windows.Forms.Button();
-            this.cbox欄位名稱 = new System.Windows.Forms.ComboBox();
-            this.txt欄位關鍵字 = new System.Windows.Forms.TextBox();
+            this.dtpBirthEnd = new System.Windows.Forms.DateTimePicker();
+            this.dtpBirthStart = new System.Windows.Forms.DateTimePicker();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.listResult = new System.Windows.Forms.ListBox();
+            this.panel13 = new System.Windows.Forms.Panel();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.txt會員點數 = new System.Windows.Forms.TextBox();
-            this.chk婚姻狀態 = new System.Windows.Forms.CheckBox();
-            this.txt電話 = new System.Windows.Forms.TextBox();
-            this.txt地址 = new System.Windows.Forms.TextBox();
-            this.txtEmail = new System.Windows.Forms.TextBox();
-            this.dtp生日 = new System.Windows.Forms.DateTimePicker();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.txt姓名 = new System.Windows.Forms.TextBox();
-            this.lblID = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtKeyWord = new System.Windows.Forms.TextBox();
+            this.FliterSearch = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btn清空欄位 = new System.Windows.Forms.Button();
-            this.btn刪除資料 = new System.Windows.Forms.Button();
-            this.btn新增資料 = new System.Windows.Forms.Button();
-            this.btn資料修改 = new System.Windows.Forms.Button();
-            this.btn資料搜尋 = new System.Windows.Forms.Button();
-            this.btn資料筆數 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
+            this.btnDataRecovery = new System.Windows.Forms.Button();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.btnAlter = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.lblID = new System.Windows.Forms.Label();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtAddr = new System.Windows.Forms.TextBox();
+            this.btnFirst = new System.Windows.Forms.Button();
+            this.btnPrevious = new System.Windows.Forms.Button();
+            this.btnNext = new System.Windows.Forms.Button();
+            this.btnLast = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.checkBoxIn = new System.Windows.Forms.CheckBox();
+            this.checkBoxOut = new System.Windows.Forms.CheckBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel11.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.gb婚姻狀態.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel7.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel3.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox4
             // 
-            this.groupBox4.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.groupBox4.BackColor = System.Drawing.Color.Wheat;
             this.groupBox4.Controls.Add(this.dataGridView1);
-            this.groupBox4.Location = new System.Drawing.Point(1245, 77);
-            this.groupBox4.Margin = new System.Windows.Forms.Padding(6);
+            this.groupBox4.Controls.Add(this.panel11);
+            this.groupBox4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox4.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.groupBox4.ForeColor = System.Drawing.Color.Maroon;
+            this.groupBox4.Location = new System.Drawing.Point(0, 503);
+            this.groupBox4.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBox4.Size = new System.Drawing.Size(1200, 750);
-            this.groupBox4.TabIndex = 11;
+            this.groupBox4.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox4.Size = new System.Drawing.Size(1275, 156);
+            this.groupBox4.TabIndex = 10;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "所有訂單";
+            this.groupBox4.Text = "訂單資料列表";
             // 
             // dataGridView1
             // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.Azure;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(13, 42);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(6);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(4, 83);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 82;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1190, 678);
+            this.dataGridView1.Size = new System.Drawing.Size(1267, 69);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // panel11
+            // 
+            this.panel11.Controls.Add(this.btnReload);
+            this.panel11.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel11.Location = new System.Drawing.Point(4, 31);
+            this.panel11.Margin = new System.Windows.Forms.Padding(2);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(1267, 52);
+            this.panel11.TabIndex = 1;
+            // 
+            // btnReload
+            // 
+            this.btnReload.BackColor = System.Drawing.Color.Maroon;
+            this.btnReload.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btnReload.FlatAppearance.BorderSize = 0;
+            this.btnReload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReload.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnReload.ForeColor = System.Drawing.Color.White;
+            this.btnReload.Location = new System.Drawing.Point(0, 0);
+            this.btnReload.Margin = new System.Windows.Forms.Padding(4);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(345, 52);
+            this.btnReload.TabIndex = 7;
+            this.btnReload.Text = "重新整理訂單資料列表";
+            this.btnReload.UseVisualStyleBackColor = false;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.groupBox3);
+            this.panel2.Controls.Add(this.groupBox2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1275, 503);
+            this.panel2.TabIndex = 12;
             // 
             // groupBox3
             // 
-            this.groupBox3.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.groupBox3.Controls.Add(this.lst搜尋結果);
-            this.groupBox3.Controls.Add(this.gb婚姻狀態);
-            this.groupBox3.Controls.Add(this.label14);
-            this.groupBox3.Controls.Add(this.label13);
-            this.groupBox3.Controls.Add(this.dtp生日結束);
-            this.groupBox3.Controls.Add(this.dtp生日開始);
-            this.groupBox3.Controls.Add(this.btn搜尋欄位關鍵字);
-            this.groupBox3.Controls.Add(this.cbox欄位名稱);
-            this.groupBox3.Controls.Add(this.txt欄位關鍵字);
-            this.groupBox3.Controls.Add(this.label12);
-            this.groupBox3.Controls.Add(this.label11);
-            this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Controls.Add(this.label6);
-            this.groupBox3.Location = new System.Drawing.Point(790, 77);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(6);
+            this.groupBox3.BackColor = System.Drawing.Color.Cornsilk;
+            this.groupBox3.Controls.Add(this.panel5);
+            this.groupBox3.Controls.Add(this.panel4);
+            this.groupBox3.Controls.Add(this.panel3);
+            this.groupBox3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox3.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.groupBox3.ForeColor = System.Drawing.Color.Maroon;
+            this.groupBox3.Location = new System.Drawing.Point(481, 0);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBox3.Size = new System.Drawing.Size(442, 750);
-            this.groupBox3.TabIndex = 10;
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox3.Size = new System.Drawing.Size(794, 503);
+            this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "進階搜尋";
             // 
-            // lst搜尋結果
+            // panel5
             // 
-            this.lst搜尋結果.FormattingEnabled = true;
-            this.lst搜尋結果.ItemHeight = 24;
-            this.lst搜尋結果.Location = new System.Drawing.Point(15, 568);
-            this.lst搜尋結果.Margin = new System.Windows.Forms.Padding(6);
-            this.lst搜尋結果.Name = "lst搜尋結果";
-            this.lst搜尋結果.Size = new System.Drawing.Size(409, 148);
-            this.lst搜尋結果.TabIndex = 12;
+            this.panel5.Controls.Add(this.panel7);
+            this.panel5.Controls.Add(this.label14);
+            this.panel5.Controls.Add(this.label13);
+            this.panel5.Controls.Add(this.dtpBirthEnd);
+            this.panel5.Controls.Add(this.dtpBirthStart);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel5.Location = new System.Drawing.Point(4, 145);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(786, 131);
+            this.panel5.TabIndex = 17;
             // 
-            // gb婚姻狀態
+            // panel7
             // 
-            this.gb婚姻狀態.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.gb婚姻狀態.Controls.Add(this.rdo全部);
-            this.gb婚姻狀態.Controls.Add(this.rdo已婚);
-            this.gb婚姻狀態.Controls.Add(this.rdo單身);
-            this.gb婚姻狀態.Location = new System.Drawing.Point(13, 446);
-            this.gb婚姻狀態.Margin = new System.Windows.Forms.Padding(6);
-            this.gb婚姻狀態.Name = "gb婚姻狀態";
-            this.gb婚姻狀態.Padding = new System.Windows.Forms.Padding(6);
-            this.gb婚姻狀態.Size = new System.Drawing.Size(416, 84);
-            this.gb婚姻狀態.TabIndex = 11;
-            this.gb婚姻狀態.TabStop = false;
+            this.panel7.BackColor = System.Drawing.Color.DarkSalmon;
+            this.panel7.Controls.Add(this.label10);
+            this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel7.Location = new System.Drawing.Point(0, 0);
+            this.panel7.Margin = new System.Windows.Forms.Padding(2);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(786, 36);
+            this.panel7.TabIndex = 16;
             // 
-            // rdo全部
+            // label10
             // 
-            this.rdo全部.AutoSize = true;
-            this.rdo全部.Location = new System.Drawing.Point(241, 38);
-            this.rdo全部.Margin = new System.Windows.Forms.Padding(6);
-            this.rdo全部.Name = "rdo全部";
-            this.rdo全部.Size = new System.Drawing.Size(89, 28);
-            this.rdo全部.TabIndex = 2;
-            this.rdo全部.TabStop = true;
-            this.rdo全部.Text = "全部";
-            this.rdo全部.UseVisualStyleBackColor = true;
-            // 
-            // rdo已婚
-            // 
-            this.rdo已婚.AutoSize = true;
-            this.rdo已婚.Location = new System.Drawing.Point(126, 38);
-            this.rdo已婚.Margin = new System.Windows.Forms.Padding(6);
-            this.rdo已婚.Name = "rdo已婚";
-            this.rdo已婚.Size = new System.Drawing.Size(89, 28);
-            this.rdo已婚.TabIndex = 1;
-            this.rdo已婚.TabStop = true;
-            this.rdo已婚.Text = "已婚";
-            this.rdo已婚.UseVisualStyleBackColor = true;
-            // 
-            // rdo單身
-            // 
-            this.rdo單身.AutoSize = true;
-            this.rdo單身.Location = new System.Drawing.Point(13, 38);
-            this.rdo單身.Margin = new System.Windows.Forms.Padding(6);
-            this.rdo單身.Name = "rdo單身";
-            this.rdo單身.Size = new System.Drawing.Size(89, 28);
-            this.rdo單身.TabIndex = 0;
-            this.rdo單身.TabStop = true;
-            this.rdo單身.Text = "單身";
-            this.rdo單身.UseVisualStyleBackColor = true;
+            this.label10.AutoSize = true;
+            this.label10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label10.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label10.Location = new System.Drawing.Point(0, 0);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(92, 25);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "訂購時間";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(43, 342);
-            this.label14.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label14.Location = new System.Drawing.Point(116, 89);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(34, 24);
-            this.label14.TabIndex = 10;
+            this.label14.Size = new System.Drawing.Size(32, 25);
+            this.label14.TabIndex = 15;
             this.label14.Text = "到";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(43, 282);
-            this.label13.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label13.Location = new System.Drawing.Point(116, 52);
+            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(34, 24);
-            this.label13.TabIndex = 9;
+            this.label13.Size = new System.Drawing.Size(32, 25);
+            this.label13.TabIndex = 14;
             this.label13.Text = "從";
             // 
-            // dtp生日結束
+            // dtpBirthEnd
             // 
-            this.dtp生日結束.Location = new System.Drawing.Point(93, 332);
-            this.dtp生日結束.Margin = new System.Windows.Forms.Padding(6);
-            this.dtp生日結束.Name = "dtp生日結束";
-            this.dtp生日結束.Size = new System.Drawing.Size(292, 36);
-            this.dtp生日結束.TabIndex = 8;
+            this.dtpBirthEnd.Location = new System.Drawing.Point(153, 85);
+            this.dtpBirthEnd.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpBirthEnd.Name = "dtpBirthEnd";
+            this.dtpBirthEnd.Size = new System.Drawing.Size(181, 34);
+            this.dtpBirthEnd.TabIndex = 13;
             // 
-            // dtp生日開始
+            // dtpBirthStart
             // 
-            this.dtp生日開始.Location = new System.Drawing.Point(93, 272);
-            this.dtp生日開始.Margin = new System.Windows.Forms.Padding(6);
-            this.dtp生日開始.Name = "dtp生日開始";
-            this.dtp生日開始.Size = new System.Drawing.Size(292, 36);
-            this.dtp生日開始.TabIndex = 7;
+            this.dtpBirthStart.Location = new System.Drawing.Point(153, 48);
+            this.dtpBirthStart.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpBirthStart.Name = "dtpBirthStart";
+            this.dtpBirthStart.Size = new System.Drawing.Size(181, 34);
+            this.dtpBirthStart.TabIndex = 12;
             // 
-            // btn搜尋欄位關鍵字
+            // panel4
             // 
-            this.btn搜尋欄位關鍵字.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btn搜尋欄位關鍵字.Location = new System.Drawing.Point(275, 156);
-            this.btn搜尋欄位關鍵字.Margin = new System.Windows.Forms.Padding(6);
-            this.btn搜尋欄位關鍵字.Name = "btn搜尋欄位關鍵字";
-            this.btn搜尋欄位關鍵字.Size = new System.Drawing.Size(115, 46);
-            this.btn搜尋欄位關鍵字.TabIndex = 6;
-            this.btn搜尋欄位關鍵字.Text = "搜尋";
-            this.btn搜尋欄位關鍵字.UseVisualStyleBackColor = false;
+            this.panel4.Controls.Add(this.listResult);
+            this.panel4.Controls.Add(this.panel13);
+            this.panel4.Controls.Add(this.panel12);
+            this.panel4.Controls.Add(this.panel9);
+            this.panel4.Controls.Add(this.panel8);
+            this.panel4.Controls.Add(this.panel6);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(4, 276);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(786, 223);
+            this.panel4.TabIndex = 16;
             // 
-            // cbox欄位名稱
+            // listResult
             // 
-            this.cbox欄位名稱.FormattingEnabled = true;
-            this.cbox欄位名稱.Location = new System.Drawing.Point(275, 104);
-            this.cbox欄位名稱.Margin = new System.Windows.Forms.Padding(6);
-            this.cbox欄位名稱.Name = "cbox欄位名稱";
-            this.cbox欄位名稱.Size = new System.Drawing.Size(110, 32);
-            this.cbox欄位名稱.TabIndex = 5;
+            this.listResult.BackColor = System.Drawing.Color.FloralWhite;
+            this.listResult.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listResult.FormattingEnabled = true;
+            this.listResult.ItemHeight = 25;
+            this.listResult.Location = new System.Drawing.Point(41, 49);
+            this.listResult.Margin = new System.Windows.Forms.Padding(4);
+            this.listResult.Name = "listResult";
+            this.listResult.Size = new System.Drawing.Size(704, 161);
+            this.listResult.TabIndex = 12;
             // 
-            // txt欄位關鍵字
+            // panel13
             // 
-            this.txt欄位關鍵字.Location = new System.Drawing.Point(13, 104);
-            this.txt欄位關鍵字.Margin = new System.Windows.Forms.Padding(6);
-            this.txt欄位關鍵字.Name = "txt欄位關鍵字";
-            this.txt欄位關鍵字.Size = new System.Drawing.Size(245, 36);
-            this.txt欄位關鍵字.TabIndex = 4;
+            this.panel13.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel13.Location = new System.Drawing.Point(41, 36);
+            this.panel13.Margin = new System.Windows.Forms.Padding(2);
+            this.panel13.Name = "panel13";
+            this.panel13.Size = new System.Drawing.Size(704, 13);
+            this.panel13.TabIndex = 17;
+            // 
+            // panel12
+            // 
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel12.Location = new System.Drawing.Point(41, 210);
+            this.panel12.Margin = new System.Windows.Forms.Padding(2);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(704, 13);
+            this.panel12.TabIndex = 16;
+            // 
+            // panel9
+            // 
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel9.Location = new System.Drawing.Point(745, 36);
+            this.panel9.Margin = new System.Windows.Forms.Padding(2);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(41, 187);
+            this.panel9.TabIndex = 15;
+            // 
+            // panel8
+            // 
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel8.Location = new System.Drawing.Point(0, 36);
+            this.panel8.Margin = new System.Windows.Forms.Padding(2);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(41, 187);
+            this.panel8.TabIndex = 14;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.DarkSalmon;
+            this.panel6.Controls.Add(this.label12);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel6.Location = new System.Drawing.Point(0, 0);
+            this.panel6.Margin = new System.Windows.Forms.Padding(2);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(786, 36);
+            this.panel6.TabIndex = 13;
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label12.Location = new System.Drawing.Point(9, 536);
-            this.label12.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label12.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label12.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label12.Location = new System.Drawing.Point(0, 0);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(154, 24);
-            this.label12.TabIndex = 3;
-            this.label12.Text = "訂單搜尋結果";
+            this.label12.Size = new System.Drawing.Size(92, 25);
+            this.label12.TabIndex = 4;
+            this.label12.Text = "搜尋結果";
             // 
-            // label11
+            // panel3
             // 
-            this.label11.AutoSize = true;
-            this.label11.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label11.Location = new System.Drawing.Point(9, 404);
-            this.label11.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(154, 24);
-            this.label11.TabIndex = 2;
-            this.label11.Text = "婚姻狀態選擇";
+            this.panel3.Controls.Add(this.panel10);
+            this.panel3.Controls.Add(this.txtKeyWord);
+            this.panel3.Controls.Add(this.FliterSearch);
+            this.panel3.Controls.Add(this.comboBox1);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(4, 31);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(786, 114);
+            this.panel3.TabIndex = 15;
             // 
-            // label10
+            // panel10
             // 
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label10.Location = new System.Drawing.Point(9, 230);
-            this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(154, 24);
-            this.label10.TabIndex = 1;
-            this.label10.Text = "生日區間指定";
+            this.panel10.BackColor = System.Drawing.Color.DarkSalmon;
+            this.panel10.Controls.Add(this.label6);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(0, 0);
+            this.panel10.Margin = new System.Windows.Forms.Padding(2);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(786, 36);
+            this.panel10.TabIndex = 17;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label6.Location = new System.Drawing.Point(9, 70);
-            this.label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label6.Dock = System.Windows.Forms.DockStyle.Top;
+            this.label6.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.label6.Location = new System.Drawing.Point(0, 0);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(178, 24);
-            this.label6.TabIndex = 0;
+            this.label6.Size = new System.Drawing.Size(152, 25);
+            this.label6.TabIndex = 13;
             this.label6.Text = "欄位關鍵字搜尋";
+            // 
+            // txtKeyWord
+            // 
+            this.txtKeyWord.Location = new System.Drawing.Point(33, 56);
+            this.txtKeyWord.Margin = new System.Windows.Forms.Padding(4);
+            this.txtKeyWord.Name = "txtKeyWord";
+            this.txtKeyWord.Size = new System.Drawing.Size(168, 34);
+            this.txtKeyWord.TabIndex = 4;
+            // 
+            // FliterSearch
+            // 
+            this.FliterSearch.BackColor = System.Drawing.Color.Chocolate;
+            this.FliterSearch.FlatAppearance.BorderSize = 0;
+            this.FliterSearch.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.FliterSearch.Font = new System.Drawing.Font("微軟正黑體", 10.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.FliterSearch.ForeColor = System.Drawing.SystemColors.MenuBar;
+            this.FliterSearch.Location = new System.Drawing.Point(298, 57);
+            this.FliterSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.FliterSearch.Name = "FliterSearch";
+            this.FliterSearch.Size = new System.Drawing.Size(113, 30);
+            this.FliterSearch.TabIndex = 14;
+            this.FliterSearch.Text = "進階搜尋";
+            this.FliterSearch.UseVisualStyleBackColor = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(205, 56);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(91, 33);
+            this.comboBox1.TabIndex = 13;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(1275, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(167, 659);
+            this.panel1.TabIndex = 11;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.Wheat;
+            this.groupBox1.Controls.Add(this.btnDataRecovery);
+            this.groupBox1.Controls.Add(this.btnDelete);
+            this.groupBox1.Controls.Add(this.btnAlter);
+            this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.groupBox1.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Maroon;
+            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox1.Size = new System.Drawing.Size(167, 659);
+            this.groupBox1.TabIndex = 4;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "功能按鈕";
+            // 
+            // btnDataRecovery
+            // 
+            this.btnDataRecovery.BackColor = System.Drawing.Color.Maroon;
+            this.btnDataRecovery.FlatAppearance.BorderSize = 0;
+            this.btnDataRecovery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDataRecovery.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnDataRecovery.ForeColor = System.Drawing.Color.White;
+            this.btnDataRecovery.Location = new System.Drawing.Point(26, 134);
+            this.btnDataRecovery.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDataRecovery.Name = "btnDataRecovery";
+            this.btnDataRecovery.Size = new System.Drawing.Size(122, 36);
+            this.btnDataRecovery.TabIndex = 6;
+            this.btnDataRecovery.Text = "回復資料";
+            this.btnDataRecovery.UseVisualStyleBackColor = false;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Maroon;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(26, 97);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(122, 36);
+            this.btnDelete.TabIndex = 4;
+            this.btnDelete.Text = "刪除資料";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            // 
+            // btnAlter
+            // 
+            this.btnAlter.BackColor = System.Drawing.Color.Maroon;
+            this.btnAlter.FlatAppearance.BorderSize = 0;
+            this.btnAlter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAlter.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnAlter.ForeColor = System.Drawing.Color.White;
+            this.btnAlter.Location = new System.Drawing.Point(26, 60);
+            this.btnAlter.Margin = new System.Windows.Forms.Padding(4);
+            this.btnAlter.Name = "btnAlter";
+            this.btnAlter.Size = new System.Drawing.Size(122, 36);
+            this.btnAlter.TabIndex = 2;
+            this.btnAlter.Text = "資料修改";
+            this.btnAlter.UseVisualStyleBackColor = false;
+            // 
+            // label8
+            // 
+            this.label8.BackColor = System.Drawing.Color.Wheat;
+            this.label8.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label8.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label8.Location = new System.Drawing.Point(166, 103);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(251, 28);
+            this.label8.TabIndex = 60;
+            this.label8.Text = "0000000";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.OldLace;
+            this.label1.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(89, 62);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(69, 24);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "訂單ID";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.OldLace;
+            this.label2.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(91, 107);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 24);
+            this.label2.TabIndex = 19;
+            this.label2.Text = "訂購者";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.OldLace;
+            this.label3.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(72, 238);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 24);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "購買數量";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.Color.OldLace;
+            this.label4.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(91, 152);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 24);
+            this.label4.TabIndex = 21;
+            this.label4.Text = "購物袋";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.OldLace;
+            this.label5.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label5.ForeColor = System.Drawing.Color.Black;
+            this.label5.Location = new System.Drawing.Point(110, 194);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 24);
+            this.label5.TabIndex = 22;
+            this.label5.Text = "品項";
+            // 
+            // lblID
+            // 
+            this.lblID.BackColor = System.Drawing.Color.Wheat;
+            this.lblID.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblID.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblID.Location = new System.Drawing.Point(166, 58);
+            this.lblID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(251, 28);
+            this.lblID.TabIndex = 23;
+            this.lblID.Text = "0000000";
+            // 
+            // txtEmail
+            // 
+            this.txtEmail.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtEmail.Location = new System.Drawing.Point(170, 230);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(247, 32);
+            this.txtEmail.TabIndex = 29;
+            // 
+            // txtAddr
+            // 
+            this.txtAddr.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.txtAddr.Location = new System.Drawing.Point(170, 186);
+            this.txtAddr.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAddr.Name = "txtAddr";
+            this.txtAddr.Size = new System.Drawing.Size(247, 32);
+            this.txtAddr.TabIndex = 30;
+            // 
+            // btnFirst
+            // 
+            this.btnFirst.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnFirst.FlatAppearance.BorderSize = 0;
+            this.btnFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnFirst.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnFirst.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnFirst.Location = new System.Drawing.Point(15, 411);
+            this.btnFirst.Margin = new System.Windows.Forms.Padding(4);
+            this.btnFirst.Name = "btnFirst";
+            this.btnFirst.Size = new System.Drawing.Size(111, 31);
+            this.btnFirst.TabIndex = 55;
+            this.btnFirst.Text = "第一筆";
+            this.btnFirst.UseVisualStyleBackColor = false;
+            // 
+            // btnPrevious
+            // 
+            this.btnPrevious.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnPrevious.FlatAppearance.BorderSize = 0;
+            this.btnPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPrevious.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnPrevious.Location = new System.Drawing.Point(127, 411);
+            this.btnPrevious.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(111, 31);
+            this.btnPrevious.TabIndex = 56;
+            this.btnPrevious.Text = "上一筆";
+            this.btnPrevious.UseVisualStyleBackColor = false;
+            // 
+            // btnNext
+            // 
+            this.btnNext.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnNext.FlatAppearance.BorderSize = 0;
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnNext.Location = new System.Drawing.Point(239, 411);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(4);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(111, 31);
+            this.btnNext.TabIndex = 57;
+            this.btnNext.Text = "下一筆";
+            this.btnNext.UseVisualStyleBackColor = false;
+            // 
+            // btnLast
+            // 
+            this.btnLast.BackColor = System.Drawing.Color.NavajoWhite;
+            this.btnLast.FlatAppearance.BorderSize = 0;
+            this.btnLast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLast.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnLast.Location = new System.Drawing.Point(351, 411);
+            this.btnLast.Margin = new System.Windows.Forms.Padding(4);
+            this.btnLast.Name = "btnLast";
+            this.btnLast.Size = new System.Drawing.Size(111, 31);
+            this.btnLast.TabIndex = 58;
+            this.btnLast.Text = "最後一筆";
+            this.btnLast.UseVisualStyleBackColor = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.OldLace;
+            this.label9.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(91, 290);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(67, 24);
+            this.label9.TabIndex = 62;
+            this.label9.Text = "總金額";
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(191, 149);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(74, 29);
+            this.checkBox1.TabIndex = 64;
+            this.checkBox1.Text = "需要";
+            this.checkBox1.UseVisualStyleBackColor = true;
             // 
             // groupBox2
             // 
-            this.groupBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Controls.Add(this.txt會員點數);
-            this.groupBox2.Controls.Add(this.chk婚姻狀態);
-            this.groupBox2.Controls.Add(this.txt電話);
-            this.groupBox2.Controls.Add(this.txt地址);
-            this.groupBox2.Controls.Add(this.txtEmail);
-            this.groupBox2.Controls.Add(this.dtp生日);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.BackColor = System.Drawing.Color.Cornsilk;
+            this.groupBox2.Controls.Add(this.checkBox2);
             this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.txt姓名);
+            this.groupBox2.Controls.Add(this.checkBoxOut);
+            this.groupBox2.Controls.Add(this.checkBoxIn);
+            this.groupBox2.Controls.Add(this.checkBox1);
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.btnLast);
+            this.groupBox2.Controls.Add(this.btnNext);
+            this.groupBox2.Controls.Add(this.btnPrevious);
+            this.groupBox2.Controls.Add(this.btnFirst);
+            this.groupBox2.Controls.Add(this.txtAddr);
+            this.groupBox2.Controls.Add(this.txtEmail);
             this.groupBox2.Controls.Add(this.lblID);
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(263, 77);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(6);
+            this.groupBox2.Controls.Add(this.label8);
+            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.groupBox2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.groupBox2.ForeColor = System.Drawing.Color.Maroon;
+            this.groupBox2.Location = new System.Drawing.Point(0, 0);
+            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBox2.Size = new System.Drawing.Size(514, 996);
-            this.groupBox2.TabIndex = 9;
+            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox2.Size = new System.Drawing.Size(481, 503);
+            this.groupBox2.TabIndex = 5;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "資料欄位";
             // 
-            // label15
+            // checkBoxIn
             // 
-            this.label15.AutoSize = true;
-            this.label15.BackColor = System.Drawing.Color.Wheat;
-            this.label15.Cursor = System.Windows.Forms.Cursors.Default;
-            this.label15.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label15.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.label15.Location = new System.Drawing.Point(358, 161);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(110, 24);
-            this.label15.TabIndex = 34;
-            this.label15.Text = "姓名搜尋";
+            this.checkBoxIn.AutoSize = true;
+            this.checkBoxIn.Location = new System.Drawing.Point(191, 344);
+            this.checkBoxIn.Name = "checkBoxIn";
+            this.checkBoxIn.Size = new System.Drawing.Size(74, 29);
+            this.checkBoxIn.TabIndex = 65;
+            this.checkBoxIn.Text = "內用";
+            this.checkBoxIn.UseVisualStyleBackColor = true;
+            this.checkBoxIn.CheckedChanged += new System.EventHandler(this.checkBoxIn_CheckedChanged);
             // 
-            // txt會員點數
+            // checkBoxOut
             // 
-            this.txt會員點數.Location = new System.Drawing.Point(184, 556);
-            this.txt會員點數.Margin = new System.Windows.Forms.Padding(6);
-            this.txt會員點數.Name = "txt會員點數";
-            this.txt會員點數.Size = new System.Drawing.Size(301, 36);
-            this.txt會員點數.TabIndex = 33;
-            // 
-            // chk婚姻狀態
-            // 
-            this.chk婚姻狀態.AutoSize = true;
-            this.chk婚姻狀態.Location = new System.Drawing.Point(184, 500);
-            this.chk婚姻狀態.Margin = new System.Windows.Forms.Padding(6);
-            this.chk婚姻狀態.Name = "chk婚姻狀態";
-            this.chk婚姻狀態.Size = new System.Drawing.Size(90, 28);
-            this.chk婚姻狀態.TabIndex = 32;
-            this.chk婚姻狀態.Text = "已婚";
-            this.chk婚姻狀態.UseVisualStyleBackColor = true;
-            // 
-            // txt電話
-            // 
-            this.txt電話.Location = new System.Drawing.Point(184, 222);
-            this.txt電話.Margin = new System.Windows.Forms.Padding(6);
-            this.txt電話.Name = "txt電話";
-            this.txt電話.Size = new System.Drawing.Size(301, 36);
-            this.txt電話.TabIndex = 31;
-            // 
-            // txt地址
-            // 
-            this.txt地址.Location = new System.Drawing.Point(184, 288);
-            this.txt地址.Margin = new System.Windows.Forms.Padding(6);
-            this.txt地址.Name = "txt地址";
-            this.txt地址.Size = new System.Drawing.Size(301, 36);
-            this.txt地址.TabIndex = 30;
-            // 
-            // txtEmail
-            // 
-            this.txtEmail.Location = new System.Drawing.Point(184, 354);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(6);
-            this.txtEmail.Name = "txtEmail";
-            this.txtEmail.Size = new System.Drawing.Size(301, 36);
-            this.txtEmail.TabIndex = 29;
-            // 
-            // dtp生日
-            // 
-            this.dtp生日.Location = new System.Drawing.Point(184, 420);
-            this.dtp生日.Margin = new System.Windows.Forms.Padding(6);
-            this.dtp生日.Name = "dtp生日";
-            this.dtp生日.Size = new System.Drawing.Size(301, 36);
-            this.dtp生日.TabIndex = 28;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.BackColor = System.Drawing.SystemColors.Window;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.label9.Location = new System.Drawing.Point(89, 418);
-            this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(63, 29);
-            this.label9.TabIndex = 27;
-            this.label9.Text = "生日";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.SystemColors.Window;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.label8.Location = new System.Drawing.Point(20, 484);
-            this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(113, 29);
-            this.label8.TabIndex = 26;
-            this.label8.Text = "婚姻狀況";
+            this.checkBoxOut.AutoSize = true;
+            this.checkBoxOut.Location = new System.Drawing.Point(299, 344);
+            this.checkBoxOut.Name = "checkBoxOut";
+            this.checkBoxOut.Size = new System.Drawing.Size(74, 29);
+            this.checkBoxOut.TabIndex = 66;
+            this.checkBoxOut.Text = "外帶";
+            this.checkBoxOut.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.BackColor = System.Drawing.SystemColors.Window;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.label7.Location = new System.Drawing.Point(20, 550);
-            this.label7.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            this.label7.BackColor = System.Drawing.Color.Wheat;
+            this.label7.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label7.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label7.Location = new System.Drawing.Point(166, 286);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(113, 29);
-            this.label7.TabIndex = 25;
-            this.label7.Text = "會員點數";
+            this.label7.Size = new System.Drawing.Size(251, 28);
+            this.label7.TabIndex = 67;
+            this.label7.Text = "0000000";
             // 
-            // txt姓名
+            // checkBox2
             // 
-            this.txt姓名.BackColor = System.Drawing.Color.Wheat;
-            this.txt姓名.Location = new System.Drawing.Point(184, 156);
-            this.txt姓名.Margin = new System.Windows.Forms.Padding(6);
-            this.txt姓名.Name = "txt姓名";
-            this.txt姓名.Size = new System.Drawing.Size(301, 36);
-            this.txt姓名.TabIndex = 24;
-            // 
-            // lblID
-            // 
-            this.lblID.BackColor = System.Drawing.Color.Azure;
-            this.lblID.Font = new System.Drawing.Font("Consolas", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblID.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblID.Location = new System.Drawing.Point(184, 94);
-            this.lblID.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.lblID.Name = "lblID";
-            this.lblID.Size = new System.Drawing.Size(303, 44);
-            this.lblID.TabIndex = 23;
-            this.lblID.Text = "0000000";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.SystemColors.Window;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.label5.Location = new System.Drawing.Point(89, 286);
-            this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(63, 29);
-            this.label5.TabIndex = 22;
-            this.label5.Text = "地址";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.SystemColors.Window;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.label4.Location = new System.Drawing.Point(89, 220);
-            this.label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(63, 29);
-            this.label4.TabIndex = 21;
-            this.label4.Text = "電話";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.SystemColors.Window;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(76, 352);
-            this.label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 29);
-            this.label3.TabIndex = 20;
-            this.label3.Text = "Email";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.SystemColors.Window;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(89, 154);
-            this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 29);
-            this.label2.TabIndex = 19;
-            this.label2.Text = "姓名";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.SystemColors.Window;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(124, 92);
-            this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(38, 29);
-            this.label1.TabIndex = 18;
-            this.label1.Text = "ID";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.groupBox1.Controls.Add(this.btn清空欄位);
-            this.groupBox1.Controls.Add(this.btn刪除資料);
-            this.groupBox1.Controls.Add(this.btn新增資料);
-            this.groupBox1.Controls.Add(this.btn資料修改);
-            this.groupBox1.Controls.Add(this.btn資料搜尋);
-            this.groupBox1.Controls.Add(this.btn資料筆數);
-            this.groupBox1.Location = new System.Drawing.Point(23, 77);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(6);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(6);
-            this.groupBox1.Size = new System.Drawing.Size(228, 750);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "功能按鈕";
-            // 
-            // btn清空欄位
-            // 
-            this.btn清空欄位.BackColor = System.Drawing.Color.BurlyWood;
-            this.btn清空欄位.Location = new System.Drawing.Point(32, 454);
-            this.btn清空欄位.Margin = new System.Windows.Forms.Padding(6);
-            this.btn清空欄位.Name = "btn清空欄位";
-            this.btn清空欄位.Size = new System.Drawing.Size(162, 46);
-            this.btn清空欄位.TabIndex = 5;
-            this.btn清空欄位.Text = "清空欄位";
-            this.btn清空欄位.UseVisualStyleBackColor = false;
-            // 
-            // btn刪除資料
-            // 
-            this.btn刪除資料.BackColor = System.Drawing.SystemColors.Control;
-            this.btn刪除資料.Location = new System.Drawing.Point(32, 394);
-            this.btn刪除資料.Margin = new System.Windows.Forms.Padding(6);
-            this.btn刪除資料.Name = "btn刪除資料";
-            this.btn刪除資料.Size = new System.Drawing.Size(162, 46);
-            this.btn刪除資料.TabIndex = 4;
-            this.btn刪除資料.Text = "刪除資料";
-            this.btn刪除資料.UseVisualStyleBackColor = false;
-            // 
-            // btn新增資料
-            // 
-            this.btn新增資料.BackColor = System.Drawing.SystemColors.Control;
-            this.btn新增資料.Location = new System.Drawing.Point(32, 334);
-            this.btn新增資料.Margin = new System.Windows.Forms.Padding(6);
-            this.btn新增資料.Name = "btn新增資料";
-            this.btn新增資料.Size = new System.Drawing.Size(162, 46);
-            this.btn新增資料.TabIndex = 3;
-            this.btn新增資料.Text = "新增資料";
-            this.btn新增資料.UseVisualStyleBackColor = false;
-            // 
-            // btn資料修改
-            // 
-            this.btn資料修改.BackColor = System.Drawing.SystemColors.Control;
-            this.btn資料修改.Location = new System.Drawing.Point(32, 274);
-            this.btn資料修改.Margin = new System.Windows.Forms.Padding(6);
-            this.btn資料修改.Name = "btn資料修改";
-            this.btn資料修改.Size = new System.Drawing.Size(162, 46);
-            this.btn資料修改.TabIndex = 2;
-            this.btn資料修改.Text = "資料修改";
-            this.btn資料修改.UseVisualStyleBackColor = false;
-            // 
-            // btn資料搜尋
-            // 
-            this.btn資料搜尋.BackColor = System.Drawing.SystemColors.Control;
-            this.btn資料搜尋.Font = new System.Drawing.Font("新細明體", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btn資料搜尋.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.btn資料搜尋.Location = new System.Drawing.Point(32, 214);
-            this.btn資料搜尋.Margin = new System.Windows.Forms.Padding(6);
-            this.btn資料搜尋.Name = "btn資料搜尋";
-            this.btn資料搜尋.Size = new System.Drawing.Size(162, 46);
-            this.btn資料搜尋.TabIndex = 1;
-            this.btn資料搜尋.Text = "資料搜尋";
-            this.btn資料搜尋.UseVisualStyleBackColor = false;
-            // 
-            // btn資料筆數
-            // 
-            this.btn資料筆數.BackColor = System.Drawing.SystemColors.Control;
-            this.btn資料筆數.Location = new System.Drawing.Point(32, 154);
-            this.btn資料筆數.Margin = new System.Windows.Forms.Padding(6);
-            this.btn資料筆數.Name = "btn資料筆數";
-            this.btn資料筆數.Size = new System.Drawing.Size(162, 46);
-            this.btn資料筆數.TabIndex = 0;
-            this.btn資料筆數.Text = "資料筆數";
-            this.btn資料筆數.UseVisualStyleBackColor = false;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(184, 617);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(301, 387);
-            this.textBox1.TabIndex = 12;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(25, 617);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(106, 24);
-            this.label16.TabIndex = 35;
-            this.label16.Text = "訂單內容";
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(290, 149);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(94, 29);
+            this.checkBox2.TabIndex = 68;
+            this.checkBox2.Text = "不需要";
+            this.checkBox2.UseVisualStyleBackColor = true;
             // 
             // FormOrderEdit
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1560, 1183);
+            this.ClientSize = new System.Drawing.Size(1442, 659);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormOrderEdit";
             this.Text = "訂單編輯";
             this.Load += new System.EventHandler(this.FormOrderEdit_Load);
             this.groupBox4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel11.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
-            this.gb婚姻狀態.ResumeLayout(false);
-            this.gb婚姻狀態.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -643,49 +785,55 @@
 
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Button btnReload;
+        private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ListBox lst搜尋結果;
-        private System.Windows.Forms.GroupBox gb婚姻狀態;
-        private System.Windows.Forms.RadioButton rdo全部;
-        private System.Windows.Forms.RadioButton rdo已婚;
-        private System.Windows.Forms.RadioButton rdo單身;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.DateTimePicker dtp生日結束;
-        private System.Windows.Forms.DateTimePicker dtp生日開始;
-        private System.Windows.Forms.Button btn搜尋欄位關鍵字;
-        private System.Windows.Forms.ComboBox cbox欄位名稱;
-        private System.Windows.Forms.TextBox txt欄位關鍵字;
+        private System.Windows.Forms.DateTimePicker dtpBirthEnd;
+        private System.Windows.Forms.DateTimePicker dtpBirthStart;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.ListBox listResult;
+        private System.Windows.Forms.Panel panel13;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtKeyWord;
+        private System.Windows.Forms.Button FliterSearch;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Button btnDataRecovery;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnAlter;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.TextBox txt會員點數;
-        private System.Windows.Forms.CheckBox chk婚姻狀態;
-        private System.Windows.Forms.TextBox txt電話;
-        private System.Windows.Forms.TextBox txt地址;
-        private System.Windows.Forms.TextBox txtEmail;
-        private System.Windows.Forms.DateTimePicker dtp生日;
+        private System.Windows.Forms.CheckBox checkBoxOut;
+        private System.Windows.Forms.CheckBox checkBoxIn;
+        private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txt姓名;
+        private System.Windows.Forms.Button btnLast;
+        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Button btnPrevious;
+        private System.Windows.Forms.Button btnFirst;
+        private System.Windows.Forms.TextBox txtAddr;
+        private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label lblID;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btn清空欄位;
-        private System.Windows.Forms.Button btn刪除資料;
-        private System.Windows.Forms.Button btn新增資料;
-        private System.Windows.Forms.Button btn資料修改;
-        private System.Windows.Forms.Button btn資料搜尋;
-        private System.Windows.Forms.Button btn資料筆數;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.Label label7;
     }
 }

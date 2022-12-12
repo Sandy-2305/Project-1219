@@ -491,7 +491,7 @@
             this.panel2.Location = new System.Drawing.Point(815, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(206, 659);
+            this.panel2.Size = new System.Drawing.Size(673, 659);
             this.panel2.TabIndex = 45;
             // 
             // FormOrder
@@ -499,7 +499,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
-            this.ClientSize = new System.Drawing.Size(1021, 659);
+            this.ClientSize = new System.Drawing.Size(1488, 659);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Margin = new System.Windows.Forms.Padding(2);

@@ -33,14 +33,15 @@
             this.lblLoginInfo = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnOrderDetail = new System.Windows.Forms.Button();
             this.btnOrder = new System.Windows.Forms.Button();
             this.btnCustomer = new System.Windows.Forms.Button();
             this.btnIndex = new System.Windows.Forms.Button();
             this.btnFormPView = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.btnLogOut = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.btnLogOut = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -54,7 +55,7 @@
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 62);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1002, 39);
             this.panel2.TabIndex = 1;
@@ -65,7 +66,7 @@
             this.panel4.Controls.Add(this.lblLoginInfo);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(646, 0);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(356, 39);
             this.panel4.TabIndex = 2;
@@ -89,7 +90,7 @@
             // 
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(151, 101);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(851, 558);
             this.panel3.TabIndex = 2;
@@ -98,16 +99,34 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Wheat;
+            this.panel1.Controls.Add(this.btnOrderDetail);
             this.panel1.Controls.Add(this.btnOrder);
             this.panel1.Controls.Add(this.btnCustomer);
             this.panel1.Controls.Add(this.btnIndex);
             this.panel1.Controls.Add(this.btnFormPView);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 101);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(151, 558);
             this.panel1.TabIndex = 3;
+            // 
+            // btnOrderDetail
+            // 
+            this.btnOrderDetail.BackColor = System.Drawing.Color.Maroon;
+            this.btnOrderDetail.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnOrderDetail.FlatAppearance.BorderSize = 0;
+            this.btnOrderDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnOrderDetail.Font = new System.Drawing.Font("微軟正黑體", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.btnOrderDetail.ForeColor = System.Drawing.Color.White;
+            this.btnOrderDetail.Location = new System.Drawing.Point(0, 192);
+            this.btnOrderDetail.Margin = new System.Windows.Forms.Padding(2);
+            this.btnOrderDetail.Name = "btnOrderDetail";
+            this.btnOrderDetail.Size = new System.Drawing.Size(151, 39);
+            this.btnOrderDetail.TabIndex = 4;
+            this.btnOrderDetail.Text = "訂單修改";
+            this.btnOrderDetail.UseVisualStyleBackColor = false;
+            this.btnOrderDetail.Click += new System.EventHandler(this.btnOrderDetail_Click);
             // 
             // btnOrder
             // 
@@ -117,8 +136,8 @@
             this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrder.Font = new System.Drawing.Font("微軟正黑體", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnOrder.ForeColor = System.Drawing.Color.White;
-            this.btnOrder.Location = new System.Drawing.Point(0, 152);
-            this.btnOrder.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnOrder.Location = new System.Drawing.Point(0, 150);
+            this.btnOrder.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(151, 39);
             this.btnOrder.TabIndex = 3;
@@ -134,8 +153,8 @@
             this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCustomer.Font = new System.Drawing.Font("微軟正黑體", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnCustomer.ForeColor = System.Drawing.Color.White;
-            this.btnCustomer.Location = new System.Drawing.Point(0, 109);
-            this.btnCustomer.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCustomer.Location = new System.Drawing.Point(0, 108);
+            this.btnCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.Size = new System.Drawing.Size(151, 39);
             this.btnCustomer.TabIndex = 2;
@@ -151,7 +170,7 @@
             this.btnIndex.Font = new System.Drawing.Font("微軟正黑體", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnIndex.ForeColor = System.Drawing.Color.White;
             this.btnIndex.Location = new System.Drawing.Point(0, 24);
-            this.btnIndex.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIndex.Margin = new System.Windows.Forms.Padding(2);
             this.btnIndex.Name = "btnIndex";
             this.btnIndex.Size = new System.Drawing.Size(151, 39);
             this.btnIndex.TabIndex = 1;
@@ -166,8 +185,8 @@
             this.btnFormPView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFormPView.Font = new System.Drawing.Font("微軟正黑體", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnFormPView.ForeColor = System.Drawing.Color.White;
-            this.btnFormPView.Location = new System.Drawing.Point(0, 67);
-            this.btnFormPView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnFormPView.Location = new System.Drawing.Point(0, 66);
+            this.btnFormPView.Margin = new System.Windows.Forms.Padding(2);
             this.btnFormPView.Name = "btnFormPView";
             this.btnFormPView.Size = new System.Drawing.Size(151, 39);
             this.btnFormPView.TabIndex = 0;
@@ -195,10 +214,19 @@
             this.panel5.Controls.Add(this.lblTitle);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel5.Margin = new System.Windows.Forms.Padding(2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(1002, 62);
             this.panel5.TabIndex = 3;
+            // 
+            // panel6
+            // 
+            this.panel6.Controls.Add(this.btnLogOut);
+            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel6.Location = new System.Drawing.Point(802, 0);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(200, 62);
+            this.panel6.TabIndex = 5;
             // 
             // btnLogOut
             // 
@@ -218,15 +246,6 @@
             this.btnLogOut.Visible = false;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
-            // panel6
-            // 
-            this.panel6.Controls.Add(this.btnLogOut);
-            this.panel6.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel6.Location = new System.Drawing.Point(802, 0);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(200, 62);
-            this.panel6.TabIndex = 5;
-            // 
             // FormAll
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -238,7 +257,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel5);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FormAll";
             this.Text = "首頁";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -269,5 +288,6 @@
         private System.Windows.Forms.Button btnOrder;
         private System.Windows.Forms.Button btnLogOut;
         private System.Windows.Forms.Panel panel6;
+        private System.Windows.Forms.Button btnOrderDetail;
     }
 }

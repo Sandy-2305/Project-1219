@@ -168,7 +168,7 @@ namespace WindowsFormsApp1
              
                 SqlConnection con = new SqlConnection(strMyPJDBConnectString);
                 con.Open();
-                string strSQL = "insert into OrderList values(@NewCustomerName,@NewProductName,@NewPrice,@NewAmount,@NewNeeds,@NewBuyBag,@NewToGo,@NewTotalPrice)";
+                string strSQL = "insert into OrderList values(@NewCustomerName,@NewProductName,@NewPrice,@NewAmount,@NewNeeds,@NewBuyBag,@NewToGo,@NewTotalPrice,@NewTime)";
                 SqlCommand cmd = new SqlCommand(strSQL, con);
                 cmd.Parameters.AddWithValue("@NewProductName", Product);
                 cmd.Parameters.AddWithValue("@NewPrice", Price);
@@ -178,6 +178,8 @@ namespace WindowsFormsApp1
                 cmd.Parameters.AddWithValue("@NewCustomerName", GlobalVar.strLoginName); ;
                 cmd.Parameters.AddWithValue("@NewToGo", isTakeOut);
                 cmd.Parameters.AddWithValue("@NewBuyBag", isBag);
+                cmd.Parameters.AddWithValue("@NewTime", DateTime.Now);
+
                 
                 int rows = cmd.ExecuteNonQuery();
                 con.Close();

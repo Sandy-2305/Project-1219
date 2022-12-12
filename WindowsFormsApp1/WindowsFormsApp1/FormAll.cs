@@ -24,8 +24,8 @@ namespace WindowsFormsApp1
             myLogin.ShowDialog();
 
             lblTitle.Text = "首頁";
-
             lblLoginInfo.Text = $"ID：{GlobalVar.memberID}  姓名：{GlobalVar.strLoginName}";
+
             if (GlobalVar.strLoginName != "")
             {
                 btnLogOut.Show();
@@ -33,6 +33,7 @@ namespace WindowsFormsApp1
             if (GlobalVar.intPerms ==1)
             {
                 btnCustomer.Hide();
+                btnOrderDetail.Hide();
             }
 
         }
@@ -51,6 +52,8 @@ namespace WindowsFormsApp1
             btnOrder.BackColor = Color.Maroon;
             btnOrder.ForeColor = Color.White;
 
+            btnOrderDetail.BackColor = Color.Maroon;
+            btnOrderDetail.ForeColor = Color.White;
 
             lblTitle.Text = "商品列表";
            
@@ -62,11 +65,9 @@ namespace WindowsFormsApp1
         internal void FromShow(Form ChildForm)
         {
             panel3.Controls.Clear();
-            
-            ChildForm.TopLevel = false; //最上層=否
-            ChildForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None; //無邊框
+            ChildForm.TopLevel = false; 
+            ChildForm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None; 
             ChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
-          
             panel3.Controls.Add(ChildForm);
             ChildForm.Show();
            
@@ -105,7 +106,8 @@ namespace WindowsFormsApp1
             btnOrder.BackColor = Color.Maroon;
             btnOrder.ForeColor = Color.White;
 
-
+            btnOrderDetail.BackColor = Color.Maroon;
+            btnOrderDetail.ForeColor = Color.White;
 
             lblTitle.Text = "首頁";
 
@@ -127,6 +129,9 @@ namespace WindowsFormsApp1
             btnOrder.BackColor = Color.Maroon;
             btnOrder.ForeColor = Color.White;
 
+            btnOrderDetail.BackColor = Color.Maroon;
+            btnOrderDetail.ForeColor = Color.White;
+
             lblTitle.Text = "顧客資料";
 
             FormCustomers FormView = new FormCustomers();
@@ -147,6 +152,9 @@ namespace WindowsFormsApp1
             btnCustomer.BackColor = Color.Maroon;
             btnCustomer.ForeColor = Color.White;
 
+            btnOrderDetail.BackColor = Color.Maroon;
+            btnOrderDetail.ForeColor = Color.White;
+
             lblTitle.Text = "訂購餐點";
 
             FormOrder FormView = new FormOrder();
@@ -161,6 +169,29 @@ namespace WindowsFormsApp1
         private void btnLogOut_Click(object sender, EventArgs e)
         {
             Application.Restart();
+        }
+
+        private void btnOrderDetail_Click(object sender, EventArgs e)
+        {
+            btnOrder.BackColor = Color.Maroon;
+            btnOrder.ForeColor = Color.White;
+
+            btnIndex.BackColor = Color.Maroon;
+            btnIndex.ForeColor = Color.White;
+
+            btnFormPView.BackColor = Color.Maroon;
+            btnFormPView.ForeColor = Color.White;
+
+            btnCustomer.BackColor = Color.Maroon;
+            btnCustomer.ForeColor = Color.White;
+
+            btnOrderDetail .BackColor= Color.OldLace;
+            btnOrderDetail.ForeColor = Color.Maroon;
+
+            lblTitle.Text = "訂單修改";
+
+            FormOrderEdit FormView = new FormOrderEdit();
+            FromShow(FormView);
         }
     }
 }

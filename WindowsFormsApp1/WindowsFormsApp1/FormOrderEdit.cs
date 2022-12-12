@@ -21,5 +21,15 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void btnAll_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBoxIn_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
