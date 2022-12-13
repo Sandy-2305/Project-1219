@@ -870,8 +870,6 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ListBox listResult;
-        private System.Windows.Forms.TextBox txtKeyWord;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtPoint;
         private System.Windows.Forms.TextBox txtPhone;
@@ -901,11 +899,8 @@
         private System.Windows.Forms.Button btnAlter;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnAll;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button FliterSearch;
         private System.Windows.Forms.Label Lable11;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label10;
@@ -917,11 +912,16 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Panel panel8;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnReload;
         private System.Windows.Forms.Panel panel11;
         private System.Windows.Forms.Panel panel13;
         private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.ListBox listResult;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TextBox txtKeyWord;
+        private System.Windows.Forms.Button FliterSearch;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

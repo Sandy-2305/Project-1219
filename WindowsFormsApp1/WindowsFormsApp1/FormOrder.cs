@@ -67,6 +67,12 @@ namespace WindowsFormsApp1
         private void cBoxProductType_SelectedIndexChanged(object sender, EventArgs e)
         {
             listBox1.Items.Clear();
+            cBoxSweet.SelectedIndex = -1;
+            cBoxIce.SelectedIndex = -1;
+            listProductPrice.Clear();
+            listProductName.Clear();
+            listProductID.Clear();
+
             string Type = cBoxProductType.SelectedItem.ToString();
             SqlConnection con = new SqlConnection(strMyPJDBConnectString);
             con.Open();
@@ -79,8 +85,7 @@ namespace WindowsFormsApp1
             if (Type == "點心")
             {
                 panel4.Hide();
-                cBoxSweet.SelectedIndex = -1;
-                cBoxIce.SelectedIndex = -1;
+                
             }
             if (Type == "飲品")
             {
@@ -165,7 +170,8 @@ namespace WindowsFormsApp1
             total();
             if (Amount > 0)
             {
-             
+                if (cBoxProductType.SelectedIndex == 1) Sweet = "";
+                if (cBoxProductType.SelectedIndex == 1) Ice = "";
                 SqlConnection con = new SqlConnection(strMyPJDBConnectString);
                 con.Open();
                 string strSQL = "insert into OrderList values(@NewCustomerName,@NewProductName,@NewPrice,@NewAmount,@NewNeeds,@NewBuyBag,@NewToGo,@NewTotalPrice,@NewTime)";
@@ -187,7 +193,7 @@ namespace WindowsFormsApp1
             }
             else
             {
-                MessageBox.Show("訂購人必填, 至少購買一杯 !");
+                MessageBox.Show("購買數量至少為1");
             }
           
 
@@ -215,12 +221,14 @@ namespace WindowsFormsApp1
 
         private void cBoxSweet_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Sweet = cBoxSweet.SelectedItem.ToString();
+            if (cBoxProductType.SelectedIndex == 0) Sweet = cBoxSweet.SelectedItem.ToString();
+            
         }
 
         private void cBoxIce_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Ice = cBoxIce.SelectedItem.ToString();
+            if (cBoxProductType.SelectedIndex == 0) Ice = cBoxIce.SelectedItem.ToString();
+           
         }
 
         private void textBoxAmount_TextChanged(object sender, EventArgs e)

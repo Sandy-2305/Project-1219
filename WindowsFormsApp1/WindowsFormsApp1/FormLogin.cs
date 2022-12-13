@@ -63,7 +63,7 @@ namespace WindowsFormsApp1
                     GlobalVar.strLoginName = reader["姓名"].ToString();
                     string Perms = reader["權限"].ToString();
                     Int32.TryParse(ID, out GlobalVar.memberID);
-                    Int32.TryParse(ID, out GlobalVar.intPerms);
+                    Int32.TryParse(Perms, out GlobalVar.intPerms);
                     if (strAcct == Acct && strPwd == Password)
                     {
                         isLoginsuc = true;

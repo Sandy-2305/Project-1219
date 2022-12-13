@@ -47,8 +47,9 @@
             this.listViewProduct.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listViewProduct.HideSelection = false;
             this.listViewProduct.Location = new System.Drawing.Point(0, 0);
+            this.listViewProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.listViewProduct.Name = "listViewProduct";
-            this.listViewProduct.Size = new System.Drawing.Size(879, 968);
+            this.listViewProduct.Size = new System.Drawing.Size(541, 605);
             this.listViewProduct.TabIndex = 1;
             this.listViewProduct.UseCompatibleStateImageBehavior = false;
             this.listViewProduct.ItemActivate += new System.EventHandler(this.listViewProduct_ItemActivate);
@@ -61,9 +62,10 @@
             this.btnPicMode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPicMode.Font = new System.Drawing.Font("微軟正黑體", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnPicMode.ForeColor = System.Drawing.Color.FloralWhite;
-            this.btnPicMode.Location = new System.Drawing.Point(3, 203);
+            this.btnPicMode.Location = new System.Drawing.Point(2, 127);
+            this.btnPicMode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPicMode.Name = "btnPicMode";
-            this.btnPicMode.Size = new System.Drawing.Size(288, 74);
+            this.btnPicMode.Size = new System.Drawing.Size(177, 46);
             this.btnPicMode.TabIndex = 3;
             this.btnPicMode.Text = "圖片模式";
             this.btnPicMode.UseVisualStyleBackColor = false;
@@ -76,9 +78,10 @@
             this.btnListMode.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListMode.Font = new System.Drawing.Font("微軟正黑體", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnListMode.ForeColor = System.Drawing.Color.FloralWhite;
-            this.btnListMode.Location = new System.Drawing.Point(3, 283);
+            this.btnListMode.Location = new System.Drawing.Point(2, 177);
+            this.btnListMode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnListMode.Name = "btnListMode";
-            this.btnListMode.Size = new System.Drawing.Size(288, 74);
+            this.btnListMode.Size = new System.Drawing.Size(177, 46);
             this.btnListMode.TabIndex = 4;
             this.btnListMode.Text = "列表模式";
             this.btnListMode.UseVisualStyleBackColor = false;
@@ -91,9 +94,10 @@
             this.btnReload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnReload.Font = new System.Drawing.Font("微軟正黑體", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnReload.ForeColor = System.Drawing.Color.FloralWhite;
-            this.btnReload.Location = new System.Drawing.Point(3, 363);
+            this.btnReload.Location = new System.Drawing.Point(2, 227);
+            this.btnReload.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnReload.Name = "btnReload";
-            this.btnReload.Size = new System.Drawing.Size(288, 74);
+            this.btnReload.Size = new System.Drawing.Size(177, 46);
             this.btnReload.TabIndex = 5;
             this.btnReload.Text = "重新載入";
             this.btnReload.UseVisualStyleBackColor = false;
@@ -106,9 +110,10 @@
             this.btnNewProduct.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNewProduct.Font = new System.Drawing.Font("微軟正黑體", 13.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnNewProduct.ForeColor = System.Drawing.Color.FloralWhite;
-            this.btnNewProduct.Location = new System.Drawing.Point(3, 443);
+            this.btnNewProduct.Location = new System.Drawing.Point(2, 277);
+            this.btnNewProduct.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNewProduct.Name = "btnNewProduct";
-            this.btnNewProduct.Size = new System.Drawing.Size(288, 74);
+            this.btnNewProduct.Size = new System.Drawing.Size(177, 46);
             this.btnNewProduct.TabIndex = 6;
             this.btnNewProduct.Text = "新增商品";
             this.btnNewProduct.UseVisualStyleBackColor = false;
@@ -119,8 +124,9 @@
             this.panel1.Controls.Add(this.listViewProduct);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(879, 968);
+            this.panel1.Size = new System.Drawing.Size(541, 605);
             this.panel1.TabIndex = 7;
             // 
             // panel2
@@ -131,9 +137,10 @@
             this.panel2.Controls.Add(this.btnReload);
             this.panel2.Controls.Add(this.btnPicMode);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(879, 0);
+            this.panel2.Location = new System.Drawing.Point(541, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(303, 968);
+            this.panel2.Size = new System.Drawing.Size(186, 605);
             this.panel2.TabIndex = 8;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
@@ -145,12 +152,13 @@
             // 
             // FormProductsView
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(13F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.OldLace;
-            this.ClientSize = new System.Drawing.Size(1182, 968);
+            this.ClientSize = new System.Drawing.Size(727, 605);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "FormProductsView";
             this.Text = "商品展示";
             this.TopMost = true;
