@@ -16,6 +16,10 @@ namespace WindowsFormsApp1
     {
         string strMyPJDBConnectString = "";
         List<int> SearchOrderIDs = new List<int>();
+        bool isBag = false;
+        bool isOut = false;
+
+
 
         public FormOrderEdit()
         {
@@ -30,13 +34,19 @@ namespace WindowsFormsApp1
             scsb.IntegratedSecurity = true;
             strMyPJDBConnectString = scsb.ToString();
 
+            comboBox1.Items.Add("訂購人");
+            comboBox1.Items.Add("品項名稱");
+           
+            comboBox1.SelectedIndex = 0;
+
             BuildOrderList();
         }
+
         void BuildOrderList()
         {
             SqlConnection con = new SqlConnection(strMyPJDBConnectString);
             con.Open();
-            string strSQL = "select OrderID as 訂單編號, 訂購人, 品項名稱, 單價, 購買數量, 客製化需求, 總金額, 訂購日期 from OrderList";
+            string strSQL = "select OrderID as 訂單編號,* from OrderList";
             SqlCommand cmd = new SqlCommand(strSQL, con);
             SqlDataReader reader = cmd.ExecuteReader();
 
@@ -49,48 +59,62 @@ namespace WindowsFormsApp1
             reader.Close();
             con.Close();
         }
-        private void checkBoxIn_CheckedChanged(object sender, EventArgs e)
+
+        void Clean()
         {
+            lblOrderID.Text = "";
+            lblOrderName.Text = "";
+            lblProductName.Text = "";
+            lblAll.Text = "";
+            checkBoxOut.Checked=false;
+            checkBoxBag.Checked = false;
+            
+            txtCount.Clear();
+            dateTimePickerOrder.Value = DateTime.Now;
 
         }
 
-        private void btnDelete_Click(object sender, EventArgs e)
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex >= 0)
+            {
+                string strSelectedID = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+                int intSelectedID = 0;
 
-        }
+                bool isID = Int32.TryParse(strSelectedID, out intSelectedID);
 
-        private void btnLast_Click(object sender, EventArgs e)
-        {
-            //    int intID = 0;
+                if (isID == true)
+                {
+                    SqlConnection con = new SqlConnection(strMyPJDBConnectString);
+                    con.Open();
+                    string strSQL = "select * from OrderList where OrderID = @SearchID;";
+                    SqlCommand cmd = new SqlCommand(strSQL, con);
+                    cmd.Parameters.AddWithValue("@SearchID", intSelectedID);
+                    SqlDataReader reader = cmd.ExecuteReader();
 
-            //    SqlConnection con = new SqlConnection(strMyPJDBConnectString);
-            //    con.Open();
-            //    string strSQL = "select * from Customers where ID = @ID ;";
-            //    string Records = "select count(*) from Customers ; ";
+                    if (reader.Read() == true)
+                    {
+                        lblOrderID.Text = reader["OrderID"].ToString();
+                        lblOrderName.Text = reader["訂購人"].ToString();
+                        lblProductName.Text = reader["品項名稱"].ToString();
+                        lblPrice.Text = reader["單價"].ToString();
+                        txtCount.Text = reader["購買數量"].ToString();
+                        txtDetail.Text = reader["客製化需求"].ToString();
+                        checkBoxBag.Checked = Convert.ToBoolean(reader["購物袋"]);
+                        checkBoxOut.Checked = Convert.ToBoolean (reader["外帶"]);
+                        lblAll.Text = reader["總金額"].ToString();
+                        dateTimePickerOrder.Value = Convert.ToDateTime(reader["訂購日期"]);
 
-            //    SqlDataAdapter DataAdapter = new SqlDataAdapter(Records, con);
-            //    DataSet DS = new DataSet();
-            //    DataAdapter.Fill(DS);
-            //    intID = (int)DS.Tables[0].Rows[0][0];
-
-
-            //    SqlCommand cmd = new SqlCommand(strSQL, con);
-            //    cmd.Parameters.AddWithValue("@ID", intID);
-            //    SqlDataReader reader = cmd.ExecuteReader();
-
-
-            //    if (reader.Read() == true)
-            //    {
-            //        lblOrderID.Text = reader["ID"].ToString();
-            //        lblOrderName.Text = reader["姓名"].ToString();
-            //        .Text = reader["電話"].ToString();
-            //        txtAddr.Text = reader["地址"].ToString();
-            //        txtEmail.Text = reader["Email"].ToString();
-            //        txtPoint.Text = reader["Point"].ToString();
-            //        dtpBirth.Value = Convert.ToDateTime(reader["生日"]);
-            //    }
-            //    reader.Close();
-            //    con.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("查無此人");
+                        Clean();
+                    }
+                    reader.Close();
+                    con.Close();
+                }
+            }
         }
     }
 }

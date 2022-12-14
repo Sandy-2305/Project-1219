@@ -60,7 +60,7 @@
             this.label2.Size = new System.Drawing.Size(81, 40);
             this.label2.TabIndex = 1;
             this.label2.Text = "帳號";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
+     
             // 
             // label3
             // 
@@ -71,7 +71,7 @@
             this.label3.Size = new System.Drawing.Size(81, 40);
             this.label3.TabIndex = 2;
             this.label3.Text = "密碼";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+
             // 
             // txtAccount
             // 
@@ -81,7 +81,7 @@
             this.txtAccount.Name = "txtAccount";
             this.txtAccount.Size = new System.Drawing.Size(368, 43);
             this.txtAccount.TabIndex = 3;
-            this.txtAccount.TextChanged += new System.EventHandler(this.txtAccount_TextChanged);
+     
             // 
             // txtPassword
             // 
@@ -132,7 +132,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(764, 139);
             this.panel1.TabIndex = 7;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel2
             // 
@@ -144,7 +143,7 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(764, 174);
             this.panel2.TabIndex = 8;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+
             // 
             // FormLogin
             // 
@@ -161,7 +160,7 @@
             this.Name = "FormLogin";
             this.Text = "會員登入";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormLogin_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FormLogin_FormClosed);
+   
             this.Load += new System.EventHandler(this.FormLogin_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -53,7 +53,7 @@
             this.listViewProduct.TabIndex = 1;
             this.listViewProduct.UseCompatibleStateImageBehavior = false;
             this.listViewProduct.ItemActivate += new System.EventHandler(this.listViewProduct_ItemActivate);
-            this.listViewProduct.SelectedIndexChanged += new System.EventHandler(this.listViewProduct_SelectedIndexChanged);
+     
             // 
             // btnPicMode
             // 
@@ -142,7 +142,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(186, 605);
             this.panel2.TabIndex = 8;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // imageListProduct
             // 

@@ -17,10 +17,14 @@ namespace WindowsFormsApp1
     {
         string strMyPJDBConnectString = "";
         List<int> SearchIDs = new List<int>();
+
+
+
         public FormCustomers()
         {
             InitializeComponent();
         }
+
         private void FormCustomers_Load(object sender, EventArgs e)
         {
             SqlConnectionStringBuilder scsb = new SqlConnectionStringBuilder();
@@ -36,69 +40,6 @@ namespace WindowsFormsApp1
             comboBox1.SelectedIndex = 0;
 
             BuildCustomerList();
-
-        }
-        private void btnLast_Click(object sender, EventArgs e)
-        {
-            int intID = 0;
- 
-            SqlConnection con = new SqlConnection(strMyPJDBConnectString);
-            con.Open();
-            string strSQL = "select * from Customers where ID = @ID ;";
-            string Records = "select count(*) from Customers ; ";
-
-            SqlDataAdapter DataAdapter = new SqlDataAdapter(Records, con);
-            DataSet DS = new DataSet();
-            DataAdapter.Fill(DS);
-            intID = (int)DS.Tables[0].Rows[0][0];
-
-
-            SqlCommand cmd = new SqlCommand(strSQL, con);
-            cmd.Parameters.AddWithValue("@ID", intID);
-            SqlDataReader reader = cmd.ExecuteReader();
-
-
-            if (reader.Read() == true)
-            {
-                lblID.Text = reader["ID"].ToString();
-                txtName.Text = reader["姓名"].ToString();
-                txtPhone.Text = reader["電話"].ToString();
-                txtAddr.Text = reader["地址"].ToString();
-                txtEmail.Text = reader["Email"].ToString();
-                txtPoint.Text = reader["Point"].ToString();
-                dtpBirth.Value = Convert.ToDateTime(reader["生日"]);
-            }
-            reader.Close();
-            con.Close();
-        }
-
-        private void btnFirst_Click(object sender, EventArgs e)
-        {
-            int intID = 1;
-            
-            SqlConnection con = new SqlConnection(strMyPJDBConnectString);
-            con.Open();
-            string strSQL = "select * from Customers where ID = @ID ;";
-            SqlCommand cmd = new SqlCommand(strSQL, con);
-            cmd.Parameters.AddWithValue("@ID", intID);
-            SqlDataReader reader = cmd.ExecuteReader();
-
-            if (reader.Read() == true)
-            {
-                lblID.Text = reader["ID"].ToString();
-                txtName.Text = reader["姓名"].ToString();
-                txtPhone.Text = reader["電話"].ToString();
-                txtAddr.Text = reader["地址"].ToString();
-                txtEmail.Text = reader["Email"].ToString();
-                txtPoint.Text = reader["Point"].ToString();
-                dtpBirth.Value = Convert.ToDateTime(reader["生日"]);
-            }
-            reader.Close();
-            con.Close();
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
 
         }
 
@@ -161,10 +102,6 @@ namespace WindowsFormsApp1
             con.Close();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
         void Clean()
         {
             lblID.Text = "";
@@ -175,8 +112,6 @@ namespace WindowsFormsApp1
             txtPoint.Clear();
             dtpBirth.Value = DateTime.Now;
         }
-
-
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -213,7 +148,7 @@ namespace WindowsFormsApp1
                     }
                     reader.Close();
                     con.Close();
-                    }
+                }
             }
             
         }
@@ -221,11 +156,6 @@ namespace WindowsFormsApp1
         private void btnClear_Click(object sender, EventArgs e)
         {
             Clean();
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void btnAll_Click(object sender, EventArgs e)
@@ -254,44 +184,6 @@ namespace WindowsFormsApp1
             reader.Close();
             con.Close();
             MessageBox.Show(strMsg);
-            
-
-        }
-
-        private void btnSearch_Click(object sender, EventArgs e)
-        {
-            if (txtName.Text != "")
-            {
-                SqlConnection con = new SqlConnection(strMyPJDBConnectString);
-                con.Open();
-                string strSQL = "select * from Customers where 姓名 like @SearchName;";
-                SqlCommand cmd = new SqlCommand(strSQL, con);
-                cmd.Parameters.AddWithValue("@SearchName", "%" + txtName.Text + "%");
-                SqlDataReader reader = cmd.ExecuteReader();
-
-                if (reader.Read() == true)
-                {
-                    lblID.Text = reader["ID"].ToString();
-                    txtName.Text = reader["姓名"].ToString();
-                    txtPhone.Text = reader["電話"].ToString();
-                    txtAddr.Text = reader["地址"].ToString();
-                    txtEmail.Text = reader["Email"].ToString();
-                    txtPoint.Text = reader["Point"].ToString();
-                    dtpBirth.Value = Convert.ToDateTime(reader["生日"]);
-
-                }
-                else
-                {
-                    MessageBox.Show("查無此人");
-                    Clean();
-                }
-                reader.Close();
-                con.Close();
-            }
-            else
-            {
-                MessageBox.Show("請在左側姓名欄位輸入關鍵字");
-            }
         }
 
         private void btnAlter_Click(object sender, EventArgs e)
@@ -323,16 +215,6 @@ namespace WindowsFormsApp1
                 //dataGridView1.CurrentCell = dataGridView1.Rows[idxrow].Cells[0];
             }
       
-        }
-
-        private void groupBox3_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel5_Paint(object sender, PaintEventArgs e)
-        {
-
         }
 
         private void btnReload_Click(object sender, EventArgs e)
@@ -386,86 +268,7 @@ namespace WindowsFormsApp1
             reader.Close();
             con.Close();
         }
-        
-
-        private void btnPrevious_Click(object sender, EventArgs e)
-        {
-            int intID = 0;
-            Int32.TryParse(lblID.Text, out intID);
-            if(intID >1) 
-            {
-                intID -= 1;
-            }
-            else
-            {
-                MessageBox.Show("此筆資料為第一筆資料");
-            }
-            SqlConnection con = new SqlConnection(strMyPJDBConnectString);
-            con.Open();
-            string strSQL = "select * from Customers where ID = @ID ;";
-            SqlCommand cmd = new SqlCommand(strSQL, con);
-            cmd.Parameters.AddWithValue("@ID", intID);
-            SqlDataReader reader = cmd.ExecuteReader();
-
-            if (reader.Read() == true)
-            {
-                lblID.Text = reader["ID"].ToString();
-                txtName.Text = reader["姓名"].ToString();
-                txtPhone.Text = reader["電話"].ToString();
-                txtAddr.Text = reader["地址"].ToString();
-                txtEmail.Text = reader["Email"].ToString();
-                txtPoint.Text = reader["Point"].ToString();
-                dtpBirth.Value = Convert.ToDateTime(reader["生日"]);
-            }
-            reader.Close();
-            con.Close();
-        }
-
-        private void btnNext_Click(object sender, EventArgs e)
-        {
-            int intID = 0;
-            Int32.TryParse(lblID.Text, out intID);
-            int count = 0;
-          
-            SqlConnection con = new SqlConnection(strMyPJDBConnectString);
-            con.Open();
-            string strSQL = "select * from Customers where ID = @ID ;";
-            string Records = "select count(*) from Customers ; ";
-
-
-            SqlDataAdapter DataAdapter = new SqlDataAdapter(Records, con);
-            DataSet DS = new DataSet();
-            DataAdapter.Fill(DS);
-            count = (int)DS.Tables[0].Rows[0][0];
-
-            if (intID < count)
-            {
-                intID += 1;
-            }
-            else
-            {
-                MessageBox.Show("此筆資料為最後一筆資料");
-            }
-            
-            SqlCommand cmd = new SqlCommand(strSQL, con);
-            cmd.Parameters.AddWithValue("@ID", intID);
-            SqlDataReader reader = cmd.ExecuteReader();
-            
-
-            if (reader.Read() == true)
-            {
-                lblID.Text = reader["ID"].ToString();
-                txtName.Text = reader["姓名"].ToString();
-                txtPhone.Text = reader["電話"].ToString();
-                txtAddr.Text = reader["地址"].ToString();
-                txtEmail.Text = reader["Email"].ToString();
-                txtPoint.Text = reader["Point"].ToString();
-                dtpBirth.Value = Convert.ToDateTime(reader["生日"]);
-            }
-            reader.Close();
-            con.Close();
-        }
-
+    
         private void listResult_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (listResult.SelectedIndex >= 0)

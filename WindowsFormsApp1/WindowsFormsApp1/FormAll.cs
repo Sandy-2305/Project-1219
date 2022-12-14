@@ -60,8 +60,8 @@ namespace WindowsFormsApp1
             FormProductsView FormProduct = new FormProductsView();
             FromShow(FormProduct);
 
-
         }
+
         internal void FromShow(Form ChildForm)
         {
             panel3.Controls.Clear();
@@ -72,26 +72,7 @@ namespace WindowsFormsApp1
             ChildForm.Show();
            
         }
-        private void panel3_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel4_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void lblLoginInfo_Click(object sender, EventArgs e)
-        {
-
-        }
-
+ 
         private void btnIndex_Click(object sender, EventArgs e)
         {
             btnIndex.BackColor = Color.OldLace;
@@ -159,11 +140,6 @@ namespace WindowsFormsApp1
 
             FormOrder FormView = new FormOrder();
             FromShow(FormView);
-        }
-
-        private void FormAll_Shown(object sender, EventArgs e)
-        {
-            
         }
 
         private void btnLogOut_Click(object sender, EventArgs e)

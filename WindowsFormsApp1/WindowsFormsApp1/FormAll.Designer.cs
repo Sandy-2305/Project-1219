@@ -59,7 +59,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1002, 39);
             this.panel2.TabIndex = 1;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // panel4
             // 
@@ -70,7 +69,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(356, 39);
             this.panel4.TabIndex = 2;
-            this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
             // lblLoginInfo
             // 
@@ -84,7 +82,6 @@
             this.lblLoginInfo.Size = new System.Drawing.Size(123, 35);
             this.lblLoginInfo.TabIndex = 0;
             this.lblLoginInfo.Text = "登入資訊";
-            this.lblLoginInfo.Click += new System.EventHandler(this.lblLoginInfo_Click);
             // 
             // panel3
             // 
@@ -94,7 +91,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(851, 558);
             this.panel3.TabIndex = 2;
-            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
             // 
             // panel1
             // 
@@ -262,7 +258,6 @@
             this.Text = "首頁";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FormAll_Load);
-            this.Shown += new System.EventHandler(this.FormAll_Shown);
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();

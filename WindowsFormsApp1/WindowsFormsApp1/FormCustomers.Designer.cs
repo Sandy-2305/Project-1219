@@ -123,7 +123,6 @@
             this.dataGridView1.Size = new System.Drawing.Size(917, 69);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panel11
             // 
@@ -169,7 +168,6 @@
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "進階搜尋";
-            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
             // 
             // panel5
             // 
@@ -184,7 +182,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(436, 131);
             this.panel5.TabIndex = 17;
-            this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
             // panel7
             // 
@@ -400,7 +397,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(91, 33);
             this.comboBox1.TabIndex = 13;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // groupBox2
             // 

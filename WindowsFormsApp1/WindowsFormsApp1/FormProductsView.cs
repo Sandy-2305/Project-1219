@@ -117,15 +117,6 @@ namespace WindowsFormsApp1
                 listViewProduct.Items.Add(item);
             }
         }
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void listViewProduct_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void btnReload_Click(object sender, EventArgs e)
         {

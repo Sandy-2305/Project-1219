@@ -93,7 +93,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(815, 659);
             this.panel1.TabIndex = 44;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // panel16
             // 
@@ -408,7 +407,6 @@
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(815, 69);
             this.panel7.TabIndex = 69;
-            this.panel7.Paint += new System.Windows.Forms.PaintEventHandler(this.panel7_Paint);
             // 
             // btnBuy
             // 
@@ -483,7 +481,6 @@
             this.lblCustomer.Size = new System.Drawing.Size(123, 35);
             this.lblCustomer.TabIndex = 44;
             this.lblCustomer.Text = "顧客姓名";
-            this.lblCustomer.Click += new System.EventHandler(this.lblCustomer_Click);
             // 
             // panel2
             // 

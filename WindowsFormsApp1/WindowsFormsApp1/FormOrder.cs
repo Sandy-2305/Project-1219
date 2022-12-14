@@ -39,20 +39,6 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void panel7_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void lblCustomer_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void radioButtonTakeOut_CheckedChanged(object sender, EventArgs e)
         {
@@ -228,7 +214,7 @@ namespace WindowsFormsApp1
         private void cBoxIce_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (cBoxProductType.SelectedIndex == 0) Ice = cBoxIce.SelectedItem.ToString();
-           
+  
         }
 
         private void textBoxAmount_TextChanged(object sender, EventArgs e)

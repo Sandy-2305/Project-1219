@@ -18,10 +18,13 @@ namespace WindowsFormsApp1
         bool isLoginsuc = false; // 驗證是否成功
         string strMyPJDBConnectString = "";
         List<int> SearchIDs = new List<int>();
+
+
         public FormLogin()
         {
             InitializeComponent();
         }
+
         private void FormLogin_Load(object sender, EventArgs e)
         {
             txtAccount.Text = "";
@@ -96,11 +99,6 @@ namespace WindowsFormsApp1
 
         }
 
-        private void FormLogin_FormClosed(object sender, FormClosedEventArgs e)
-        {
-           
-        }
-
         private void FormLogin_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (isLoginsuc == false) 
@@ -109,30 +107,6 @@ namespace WindowsFormsApp1
             { e.Cancel = false; }
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtAccount_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 
 }
