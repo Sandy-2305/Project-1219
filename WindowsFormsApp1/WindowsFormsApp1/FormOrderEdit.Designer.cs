@@ -56,10 +56,6 @@
             this.checkBoxIn = new System.Windows.Forms.CheckBox();
             this.ckbBag = new System.Windows.Forms.CheckBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.btnLast = new System.Windows.Forms.Button();
-            this.btnNext = new System.Windows.Forms.Button();
-            this.btnPrevious = new System.Windows.Forms.Button();
-            this.btnFirst = new System.Windows.Forms.Button();
             this.txtProductName = new System.Windows.Forms.TextBox();
             this.txtCount = new System.Windows.Forms.TextBox();
             this.lblOrderID = new System.Windows.Forms.Label();
@@ -340,10 +336,6 @@
             this.groupBox2.Controls.Add(this.checkBoxIn);
             this.groupBox2.Controls.Add(this.ckbBag);
             this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.btnLast);
-            this.groupBox2.Controls.Add(this.btnNext);
-            this.groupBox2.Controls.Add(this.btnPrevious);
-            this.groupBox2.Controls.Add(this.btnFirst);
             this.groupBox2.Controls.Add(this.txtProductName);
             this.groupBox2.Controls.Add(this.txtCount);
             this.groupBox2.Controls.Add(this.lblOrderID);
@@ -369,7 +361,7 @@
             // 
             this.ckbNoBag.AllowDrop = true;
             this.ckbNoBag.AutoSize = true;
-            this.ckbNoBag.Location = new System.Drawing.Point(290, 149);
+            this.ckbNoBag.Location = new System.Drawing.Point(280, 186);
             this.ckbNoBag.Name = "ckbNoBag";
             this.ckbNoBag.Size = new System.Drawing.Size(94, 29);
             this.ckbNoBag.TabIndex = 68;
@@ -381,7 +373,7 @@
             this.lblAll.BackColor = System.Drawing.Color.Wheat;
             this.lblAll.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblAll.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblAll.Location = new System.Drawing.Point(166, 286);
+            this.lblAll.Location = new System.Drawing.Point(156, 323);
             this.lblAll.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAll.Name = "lblAll";
             this.lblAll.Size = new System.Drawing.Size(251, 28);
@@ -391,7 +383,7 @@
             // checkBoxOut
             // 
             this.checkBoxOut.AutoSize = true;
-            this.checkBoxOut.Location = new System.Drawing.Point(299, 344);
+            this.checkBoxOut.Location = new System.Drawing.Point(289, 381);
             this.checkBoxOut.Name = "checkBoxOut";
             this.checkBoxOut.Size = new System.Drawing.Size(74, 29);
             this.checkBoxOut.TabIndex = 66;
@@ -401,7 +393,7 @@
             // checkBoxIn
             // 
             this.checkBoxIn.AutoSize = true;
-            this.checkBoxIn.Location = new System.Drawing.Point(191, 344);
+            this.checkBoxIn.Location = new System.Drawing.Point(181, 381);
             this.checkBoxIn.Name = "checkBoxIn";
             this.checkBoxIn.Size = new System.Drawing.Size(74, 29);
             this.checkBoxIn.TabIndex = 65;
@@ -412,7 +404,7 @@
             // ckbBag
             // 
             this.ckbBag.AutoSize = true;
-            this.ckbBag.Location = new System.Drawing.Point(191, 149);
+            this.ckbBag.Location = new System.Drawing.Point(181, 186);
             this.ckbBag.Name = "ckbBag";
             this.ckbBag.Size = new System.Drawing.Size(74, 29);
             this.ckbBag.TabIndex = 64;
@@ -425,74 +417,17 @@
             this.label9.BackColor = System.Drawing.Color.OldLace;
             this.label9.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(91, 290);
+            this.label9.Location = new System.Drawing.Point(81, 327);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(67, 24);
             this.label9.TabIndex = 62;
             this.label9.Text = "總金額";
             // 
-            // btnLast
-            // 
-            this.btnLast.BackColor = System.Drawing.Color.NavajoWhite;
-            this.btnLast.FlatAppearance.BorderSize = 0;
-            this.btnLast.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLast.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnLast.Location = new System.Drawing.Point(351, 411);
-            this.btnLast.Margin = new System.Windows.Forms.Padding(4);
-            this.btnLast.Name = "btnLast";
-            this.btnLast.Size = new System.Drawing.Size(111, 31);
-            this.btnLast.TabIndex = 58;
-            this.btnLast.Text = "最後一筆";
-            this.btnLast.UseVisualStyleBackColor = false;
-            // 
-            // btnNext
-            // 
-            this.btnNext.BackColor = System.Drawing.Color.NavajoWhite;
-            this.btnNext.FlatAppearance.BorderSize = 0;
-            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNext.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnNext.Location = new System.Drawing.Point(239, 411);
-            this.btnNext.Margin = new System.Windows.Forms.Padding(4);
-            this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(111, 31);
-            this.btnNext.TabIndex = 57;
-            this.btnNext.Text = "下一筆";
-            this.btnNext.UseVisualStyleBackColor = false;
-            // 
-            // btnPrevious
-            // 
-            this.btnPrevious.BackColor = System.Drawing.Color.NavajoWhite;
-            this.btnPrevious.FlatAppearance.BorderSize = 0;
-            this.btnPrevious.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnPrevious.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnPrevious.Location = new System.Drawing.Point(127, 411);
-            this.btnPrevious.Margin = new System.Windows.Forms.Padding(4);
-            this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(111, 31);
-            this.btnPrevious.TabIndex = 56;
-            this.btnPrevious.Text = "上一筆";
-            this.btnPrevious.UseVisualStyleBackColor = false;
-            // 
-            // btnFirst
-            // 
-            this.btnFirst.BackColor = System.Drawing.Color.NavajoWhite;
-            this.btnFirst.FlatAppearance.BorderSize = 0;
-            this.btnFirst.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnFirst.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.btnFirst.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnFirst.Location = new System.Drawing.Point(15, 411);
-            this.btnFirst.Margin = new System.Windows.Forms.Padding(4);
-            this.btnFirst.Name = "btnFirst";
-            this.btnFirst.Size = new System.Drawing.Size(111, 31);
-            this.btnFirst.TabIndex = 55;
-            this.btnFirst.Text = "第一筆";
-            this.btnFirst.UseVisualStyleBackColor = false;
-            // 
             // txtProductName
             // 
             this.txtProductName.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtProductName.Location = new System.Drawing.Point(170, 186);
+            this.txtProductName.Location = new System.Drawing.Point(160, 223);
             this.txtProductName.Margin = new System.Windows.Forms.Padding(4);
             this.txtProductName.Name = "txtProductName";
             this.txtProductName.Size = new System.Drawing.Size(247, 32);
@@ -501,7 +436,7 @@
             // txtCount
             // 
             this.txtCount.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.txtCount.Location = new System.Drawing.Point(170, 230);
+            this.txtCount.Location = new System.Drawing.Point(160, 267);
             this.txtCount.Margin = new System.Windows.Forms.Padding(4);
             this.txtCount.Name = "txtCount";
             this.txtCount.Size = new System.Drawing.Size(247, 32);
@@ -512,7 +447,7 @@
             this.lblOrderID.BackColor = System.Drawing.Color.Wheat;
             this.lblOrderID.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblOrderID.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblOrderID.Location = new System.Drawing.Point(166, 58);
+            this.lblOrderID.Location = new System.Drawing.Point(156, 95);
             this.lblOrderID.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOrderID.Name = "lblOrderID";
             this.lblOrderID.Size = new System.Drawing.Size(251, 28);
@@ -525,7 +460,7 @@
             this.label5.BackColor = System.Drawing.Color.OldLace;
             this.label5.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(110, 194);
+            this.label5.Location = new System.Drawing.Point(100, 231);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 24);
@@ -538,7 +473,7 @@
             this.label4.BackColor = System.Drawing.Color.OldLace;
             this.label4.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(91, 152);
+            this.label4.Location = new System.Drawing.Point(81, 189);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(67, 24);
@@ -551,7 +486,7 @@
             this.label3.BackColor = System.Drawing.Color.OldLace;
             this.label3.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(72, 238);
+            this.label3.Location = new System.Drawing.Point(62, 275);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 24);
@@ -564,7 +499,7 @@
             this.label2.BackColor = System.Drawing.Color.OldLace;
             this.label2.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(91, 107);
+            this.label2.Location = new System.Drawing.Point(81, 144);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(67, 24);
@@ -577,7 +512,7 @@
             this.label1.BackColor = System.Drawing.Color.OldLace;
             this.label1.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(89, 62);
+            this.label1.Location = new System.Drawing.Point(79, 99);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(69, 24);
@@ -589,7 +524,7 @@
             this.lblOrderName.BackColor = System.Drawing.Color.Wheat;
             this.lblOrderName.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.lblOrderName.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lblOrderName.Location = new System.Drawing.Point(166, 103);
+            this.lblOrderName.Location = new System.Drawing.Point(156, 140);
             this.lblOrderName.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblOrderName.Name = "lblOrderName";
             this.lblOrderName.Size = new System.Drawing.Size(251, 28);
@@ -734,10 +669,6 @@
         private System.Windows.Forms.CheckBox checkBoxIn;
         private System.Windows.Forms.CheckBox ckbBag;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button btnLast;
-        private System.Windows.Forms.Button btnNext;
-        private System.Windows.Forms.Button btnPrevious;
-        private System.Windows.Forms.Button btnFirst;
         private System.Windows.Forms.TextBox txtProductName;
         private System.Windows.Forms.TextBox txtCount;
         private System.Windows.Forms.Label lblOrderID;

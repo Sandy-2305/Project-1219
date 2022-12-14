@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace WindowsFormsApp1
 {
@@ -48,11 +49,6 @@ namespace WindowsFormsApp1
             reader.Close();
             con.Close();
         }
-        private void btnAll_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void checkBoxIn_CheckedChanged(object sender, EventArgs e)
         {
 
@@ -61,6 +57,40 @@ namespace WindowsFormsApp1
         private void btnDelete_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnLast_Click(object sender, EventArgs e)
+        {
+            //    int intID = 0;
+
+            //    SqlConnection con = new SqlConnection(strMyPJDBConnectString);
+            //    con.Open();
+            //    string strSQL = "select * from Customers where ID = @ID ;";
+            //    string Records = "select count(*) from Customers ; ";
+
+            //    SqlDataAdapter DataAdapter = new SqlDataAdapter(Records, con);
+            //    DataSet DS = new DataSet();
+            //    DataAdapter.Fill(DS);
+            //    intID = (int)DS.Tables[0].Rows[0][0];
+
+
+            //    SqlCommand cmd = new SqlCommand(strSQL, con);
+            //    cmd.Parameters.AddWithValue("@ID", intID);
+            //    SqlDataReader reader = cmd.ExecuteReader();
+
+
+            //    if (reader.Read() == true)
+            //    {
+            //        lblOrderID.Text = reader["ID"].ToString();
+            //        lblOrderName.Text = reader["姓名"].ToString();
+            //        .Text = reader["電話"].ToString();
+            //        txtAddr.Text = reader["地址"].ToString();
+            //        txtEmail.Text = reader["Email"].ToString();
+            //        txtPoint.Text = reader["Point"].ToString();
+            //        dtpBirth.Value = Convert.ToDateTime(reader["生日"]);
+            //    }
+            //    reader.Close();
+            //    con.Close();
         }
     }
 }

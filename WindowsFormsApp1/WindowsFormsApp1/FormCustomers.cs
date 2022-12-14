@@ -17,8 +17,6 @@ namespace WindowsFormsApp1
     {
         string strMyPJDBConnectString = "";
         List<int> SearchIDs = new List<int>();
-
-
         public FormCustomers()
         {
             InitializeComponent();
@@ -119,6 +117,8 @@ namespace WindowsFormsApp1
                 cmd.Parameters.AddWithValue("@SearchKeyword", "%" + txtKeyWord.Text + "%");
                 cmd.Parameters.AddWithValue("@BirthEnd", dtpBirthEnd.Value);
                 cmd.Parameters.AddWithValue("@BirthStart", dtpBirthStart.Value);
+                
+               
                 SqlDataReader reader = cmd.ExecuteReader();
 
                 int count = 0;
@@ -322,6 +322,7 @@ namespace WindowsFormsApp1
                 MessageBox.Show($"({rows}個資料列受到影響)");
                 //dataGridView1.CurrentCell = dataGridView1.Rows[idxrow].Cells[0];
             }
+      
         }
 
         private void groupBox3_Enter(object sender, EventArgs e)
@@ -332,33 +333,6 @@ namespace WindowsFormsApp1
         private void panel5_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private void btnNew_Click(object sender, EventArgs e)
-        {
-            if ((txtName.Text != "") && (txtPhone.Text != "") && (txtAddr.Text != "") && (txtEmail.Text != "") && (txtPoint.Text != ""))
-            {
-                SqlConnection con = new SqlConnection(strMyPJDBConnectString);
-                con.Open();
-                string strSQL = "insert into Customers values (@NewName,@NewPhone,@NewAddress,@NewEmail,@NewBirth,@NewPoints);";
-                SqlCommand cmd = new SqlCommand(strSQL, con);
-                cmd.Parameters.AddWithValue("@NewName", txtName.Text);
-                cmd.Parameters.AddWithValue("@NewPhone", txtPhone.Text);
-                cmd.Parameters.AddWithValue("@NewAddress", txtAddr.Text);
-                cmd.Parameters.AddWithValue("@NewEmail", txtEmail.Text);
-                cmd.Parameters.AddWithValue("@NewBirth", dtpBirth.Value);
-                int intPoints = 0;
-                Int32.TryParse(txtPoint.Text, out intPoints);
-                cmd.Parameters.AddWithValue("@NewPoints", intPoints);
-
-                int rows = cmd.ExecuteNonQuery();
-                con.Close();
-                MessageBox.Show($"({rows}個資料列受到影響)");
-            }
-            else
-            {
-                MessageBox.Show("請務必填寫完整資料");
-            }
         }
 
         private void btnReload_Click(object sender, EventArgs e)
@@ -523,5 +497,6 @@ namespace WindowsFormsApp1
             }
            
         }
+
     }
 }
