@@ -123,6 +123,7 @@
             this.txtPwd.Font = new System.Drawing.Font("微軟正黑體", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.txtPwd.Location = new System.Drawing.Point(335, 219);
             this.txtPwd.Name = "txtPwd";
+            this.txtPwd.PasswordChar = '*';
             this.txtPwd.Size = new System.Drawing.Size(200, 31);
             this.txtPwd.TabIndex = 13;
             // 
