@@ -107,6 +107,11 @@ namespace WindowsFormsApp1
             { e.Cancel = false; }
         }
 
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            FormAdd myForm = new FormAdd();
+            myForm.ShowDialog();
+        }
     }
 
 }

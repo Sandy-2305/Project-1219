@@ -193,7 +193,7 @@ namespace WindowsFormsApp1
 
             if ((intID > 0) && (txtName.Text != "") && (txtPhone.Text != ""))
             {
-                //int idxrow = dataGridView1.CurrentRow.Index;
+                int idxrow = dataGridView1.CurrentRow.Index;
                 SqlConnection con = new SqlConnection(strMyPJDBConnectString);
                 con.Open();
                 string strSQL = "update Customers set 姓名=@NewName, 電話=@NewPhone, 地址=@NewAddress, Email=@NewEmail, 生日=@NewBirth, Point=@NewPoints where ID = @SearchID;";
@@ -212,9 +212,9 @@ namespace WindowsFormsApp1
                 int rows = cmd.ExecuteNonQuery();
                 con.Close();
                 MessageBox.Show($"({rows}個資料列受到影響)");
-                //dataGridView1.CurrentCell = dataGridView1.Rows[idxrow].Cells[0];
+                dataGridView1.CurrentCell = dataGridView1.Rows[idxrow].Cells[0];
             }
-      
+
         }
 
         private void btnReload_Click(object sender, EventArgs e)
@@ -297,6 +297,9 @@ namespace WindowsFormsApp1
                 {
                     MessageBox.Show("查無此人");
                 }
+                reader.Close();
+                con.Close();
+                
             }
            
         }

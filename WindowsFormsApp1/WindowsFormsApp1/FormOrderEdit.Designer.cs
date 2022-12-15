@@ -55,7 +55,8 @@
             this.txtKeyWord = new System.Windows.Forms.TextBox();
             this.FliterSearch = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblDate = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.checkBoxOut = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.checkBoxBag = new System.Windows.Forms.CheckBox();
@@ -66,7 +67,6 @@
             this.txtDetail = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePickerOrder = new System.Windows.Forms.DateTimePicker();
             this.lblAll = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.txtCount = new System.Windows.Forms.TextBox();
@@ -93,7 +93,7 @@
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel10.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.lblDate.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -154,11 +154,12 @@
             this.btnReload.TabIndex = 7;
             this.btnReload.Text = "重新整理訂單資料列表";
             this.btnReload.UseVisualStyleBackColor = false;
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
             // panel2
             // 
             this.panel2.Controls.Add(this.groupBox3);
-            this.panel2.Controls.Add(this.groupBox2);
+            this.panel2.Controls.Add(this.lblDate);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
@@ -283,6 +284,7 @@
             this.listResult.Name = "listResult";
             this.listResult.Size = new System.Drawing.Size(704, 161);
             this.listResult.TabIndex = 12;
+            this.listResult.SelectedIndexChanged += new System.EventHandler(this.listResult_SelectedIndexChanged);
             // 
             // panel13
             // 
@@ -401,6 +403,7 @@
             this.FliterSearch.TabIndex = 14;
             this.FliterSearch.Text = "搜尋";
             this.FliterSearch.UseVisualStyleBackColor = false;
+            this.FliterSearch.Click += new System.EventHandler(this.FliterSearch_Click);
             // 
             // comboBox1
             // 
@@ -411,41 +414,53 @@
             this.comboBox1.Size = new System.Drawing.Size(91, 33);
             this.comboBox1.TabIndex = 13;
             // 
-            // groupBox2
+            // lblDate
             // 
-            this.groupBox2.BackColor = System.Drawing.Color.Cornsilk;
-            this.groupBox2.Controls.Add(this.checkBoxOut);
-            this.groupBox2.Controls.Add(this.label8);
-            this.groupBox2.Controls.Add(this.checkBoxBag);
-            this.groupBox2.Controls.Add(this.外帶);
-            this.groupBox2.Controls.Add(this.lblProductName);
-            this.groupBox2.Controls.Add(this.lblPrice);
-            this.groupBox2.Controls.Add(this.單價);
-            this.groupBox2.Controls.Add(this.txtDetail);
-            this.groupBox2.Controls.Add(this.label7);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.dateTimePickerOrder);
-            this.groupBox2.Controls.Add(this.lblAll);
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.txtCount);
-            this.groupBox2.Controls.Add(this.lblOrderID);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Controls.Add(this.lblOrderName);
-            this.groupBox2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.groupBox2.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.groupBox2.ForeColor = System.Drawing.Color.Maroon;
-            this.groupBox2.Location = new System.Drawing.Point(0, 0);
-            this.groupBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox2.Size = new System.Drawing.Size(481, 503);
-            this.groupBox2.TabIndex = 5;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "訂單";
+            this.lblDate.BackColor = System.Drawing.Color.Cornsilk;
+            this.lblDate.Controls.Add(this.label15);
+            this.lblDate.Controls.Add(this.checkBoxOut);
+            this.lblDate.Controls.Add(this.label8);
+            this.lblDate.Controls.Add(this.checkBoxBag);
+            this.lblDate.Controls.Add(this.外帶);
+            this.lblDate.Controls.Add(this.lblProductName);
+            this.lblDate.Controls.Add(this.lblPrice);
+            this.lblDate.Controls.Add(this.單價);
+            this.lblDate.Controls.Add(this.txtDetail);
+            this.lblDate.Controls.Add(this.label7);
+            this.lblDate.Controls.Add(this.label6);
+            this.lblDate.Controls.Add(this.lblAll);
+            this.lblDate.Controls.Add(this.label9);
+            this.lblDate.Controls.Add(this.txtCount);
+            this.lblDate.Controls.Add(this.lblOrderID);
+            this.lblDate.Controls.Add(this.label5);
+            this.lblDate.Controls.Add(this.label4);
+            this.lblDate.Controls.Add(this.label3);
+            this.lblDate.Controls.Add(this.label2);
+            this.lblDate.Controls.Add(this.label1);
+            this.lblDate.Controls.Add(this.lblOrderName);
+            this.lblDate.Dock = System.Windows.Forms.DockStyle.Left;
+            this.lblDate.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblDate.ForeColor = System.Drawing.Color.Maroon;
+            this.lblDate.Location = new System.Drawing.Point(0, 0);
+            this.lblDate.Margin = new System.Windows.Forms.Padding(4);
+            this.lblDate.Name = "lblDate";
+            this.lblDate.Padding = new System.Windows.Forms.Padding(4);
+            this.lblDate.Size = new System.Drawing.Size(481, 503);
+            this.lblDate.TabIndex = 5;
+            this.lblDate.TabStop = false;
+            this.lblDate.Text = "訂單";
+            // 
+            // label15
+            // 
+            this.label15.BackColor = System.Drawing.Color.Wheat;
+            this.label15.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.label15.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.label15.Location = new System.Drawing.Point(167, 402);
+            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(251, 28);
+            this.label15.TabIndex = 82;
+            this.label15.Text = "日期";
             // 
             // checkBoxOut
             // 
@@ -561,13 +576,6 @@
             this.label6.TabIndex = 70;
             this.label6.Text = "訂購日期";
             // 
-            // dateTimePickerOrder
-            // 
-            this.dateTimePickerOrder.Location = new System.Drawing.Point(171, 406);
-            this.dateTimePickerOrder.Name = "dateTimePickerOrder";
-            this.dateTimePickerOrder.Size = new System.Drawing.Size(247, 34);
-            this.dateTimePickerOrder.TabIndex = 69;
-            // 
             // lblAll
             // 
             this.lblAll.BackColor = System.Drawing.Color.Wheat;
@@ -601,6 +609,7 @@
             this.txtCount.Name = "txtCount";
             this.txtCount.Size = new System.Drawing.Size(247, 32);
             this.txtCount.TabIndex = 29;
+            this.txtCount.TextChanged += new System.EventHandler(this.txtCount_TextChanged);
             // 
             // lblOrderID
             // 
@@ -689,7 +698,7 @@
             this.lblOrderName.Name = "lblOrderName";
             this.lblOrderName.Size = new System.Drawing.Size(251, 28);
             this.lblOrderName.TabIndex = 60;
-            this.lblOrderName.Text = "0000000";
+            this.lblOrderName.Text = "訂購者姓名";
             // 
             // panel1
             // 
@@ -733,6 +742,7 @@
             this.btnDataRecovery.TabIndex = 6;
             this.btnDataRecovery.Text = "回復資料";
             this.btnDataRecovery.UseVisualStyleBackColor = false;
+            this.btnDataRecovery.Click += new System.EventHandler(this.btnDataRecovery_Click);
             // 
             // btnDelete
             // 
@@ -746,8 +756,9 @@
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(122, 36);
             this.btnDelete.TabIndex = 4;
-            this.btnDelete.Text = "刪除資料";
+            this.btnDelete.Text = "刪除訂單";
             this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAlter
             // 
@@ -763,6 +774,7 @@
             this.btnAlter.TabIndex = 2;
             this.btnAlter.Text = "資料修改";
             this.btnAlter.UseVisualStyleBackColor = false;
+            this.btnAlter.Click += new System.EventHandler(this.btnAlter_Click);
             // 
             // FormOrderEdit
             // 
@@ -792,8 +804,8 @@
             this.panel3.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.lblDate.ResumeLayout(false);
+            this.lblDate.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -812,7 +824,7 @@
         private System.Windows.Forms.Button btnDataRecovery;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAlter;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox lblDate;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtCount;
         private System.Windows.Forms.Label lblOrderID;
@@ -824,7 +836,6 @@
         private System.Windows.Forms.Label lblOrderName;
         private System.Windows.Forms.Label lblAll;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DateTimePicker dateTimePickerOrder;
         private System.Windows.Forms.TextBox txtDetail;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label lblPrice;
@@ -856,5 +867,6 @@
         private System.Windows.Forms.TextBox txtKeyWord;
         private System.Windows.Forms.Button FliterSearch;
         private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label15;
     }
 }

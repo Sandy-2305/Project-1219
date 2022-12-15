@@ -43,7 +43,9 @@ namespace WindowsFormsApp1
                 listProductID.Add((int)reader["ProductID"]);
                 listProductName.Add(reader["ProductName"].ToString());
                 listProductPrice.Add((int)reader["ProductPrice"]);
+
                 image_name = reader["ProductImage"].ToString();
+
                 Image myProductImage = Image.FromFile(image_dir + image_name);
                 imageListProduct.Images.Add(myProductImage);
                 i += 1;

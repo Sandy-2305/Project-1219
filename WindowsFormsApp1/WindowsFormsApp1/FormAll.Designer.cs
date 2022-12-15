@@ -115,7 +115,7 @@
             this.btnOrderDetail.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrderDetail.Font = new System.Drawing.Font("微軟正黑體", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnOrderDetail.ForeColor = System.Drawing.Color.White;
-            this.btnOrderDetail.Location = new System.Drawing.Point(0, 192);
+            this.btnOrderDetail.Location = new System.Drawing.Point(2, 150);
             this.btnOrderDetail.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrderDetail.Name = "btnOrderDetail";
             this.btnOrderDetail.Size = new System.Drawing.Size(151, 39);
@@ -132,7 +132,7 @@
             this.btnOrder.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnOrder.Font = new System.Drawing.Font("微軟正黑體", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnOrder.ForeColor = System.Drawing.Color.White;
-            this.btnOrder.Location = new System.Drawing.Point(0, 150);
+            this.btnOrder.Location = new System.Drawing.Point(2, 108);
             this.btnOrder.Margin = new System.Windows.Forms.Padding(2);
             this.btnOrder.Name = "btnOrder";
             this.btnOrder.Size = new System.Drawing.Size(151, 39);
@@ -149,7 +149,7 @@
             this.btnCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCustomer.Font = new System.Drawing.Font("微軟正黑體", 16.125F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnCustomer.ForeColor = System.Drawing.Color.White;
-            this.btnCustomer.Location = new System.Drawing.Point(0, 108);
+            this.btnCustomer.Location = new System.Drawing.Point(2, 192);
             this.btnCustomer.Margin = new System.Windows.Forms.Padding(2);
             this.btnCustomer.Name = "btnCustomer";
             this.btnCustomer.Size = new System.Drawing.Size(151, 39);
