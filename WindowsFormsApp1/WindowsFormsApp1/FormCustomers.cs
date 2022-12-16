@@ -215,6 +215,7 @@ namespace WindowsFormsApp1
                 MessageBox.Show($"({rows}個資料列受到影響)");
                 dataGridView1.CurrentCell = dataGridView1.Rows[idxrow].Cells[0];
             }
+            BuildCustomerList();
 
         }
 
@@ -242,6 +243,7 @@ namespace WindowsFormsApp1
                 Clean();
                 MessageBox.Show($"({rows}個資料列受到影響)");
             }
+            BuildCustomerList();
         }
 
         private void btnDataRecovery_Click(object sender, EventArgs e)

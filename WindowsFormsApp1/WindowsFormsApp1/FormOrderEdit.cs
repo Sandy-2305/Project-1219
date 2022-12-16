@@ -192,6 +192,7 @@ namespace WindowsFormsApp1
                     MessageBox.Show($"({rows}個資料列受到影響)");
                     dataGridView1.CurrentCell = dataGridView1.Rows[idxrow].Cells[0];
                 }
+                BuildOrderList();
             }
             else
             {
@@ -278,6 +279,7 @@ namespace WindowsFormsApp1
                 Clean();
                 MessageBox.Show($"({rows}個資料列受到影響)");
             }
+            BuildOrderList();
         }
 
         private void btnDataRecovery_Click(object sender, EventArgs e)
