@@ -34,6 +34,7 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.pictureBoxProduct = new System.Windows.Forms.PictureBox();
             this.groupBoxAlterProduct = new System.Windows.Forms.GroupBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.btnAlter = new System.Windows.Forms.Button();
             this.btnSelectPic1 = new System.Windows.Forms.Button();
             this.txtProductDetail = new System.Windows.Forms.TextBox();
@@ -50,7 +51,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtProductType = new System.Windows.Forms.TextBox();
-            this.btnDelete = new System.Windows.Forms.Button();
             this.groupBoxNewProduct.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProduct)).BeginInit();
             this.groupBoxAlterProduct.SuspendLayout();
@@ -143,6 +143,21 @@
             this.groupBoxAlterProduct.TabIndex = 21;
             this.groupBoxAlterProduct.TabStop = false;
             this.groupBoxAlterProduct.Text = " 修改商品資訊";
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Maroon;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(146, 136);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(156, 38);
+            this.btnDelete.TabIndex = 2;
+            this.btnDelete.Text = "下架商品";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnAlter
             // 
@@ -321,20 +336,6 @@
             this.txtProductType.Name = "txtProductType";
             this.txtProductType.Size = new System.Drawing.Size(233, 25);
             this.txtProductType.TabIndex = 28;
-            // 
-            // btnDelete
-            // 
-            this.btnDelete.BackColor = System.Drawing.Color.Maroon;
-            this.btnDelete.FlatAppearance.BorderSize = 0;
-            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(146, 136);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
-            this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(156, 38);
-            this.btnDelete.TabIndex = 2;
-            this.btnDelete.Text = "下架商品";
-            this.btnDelete.UseVisualStyleBackColor = false;
             // 
             // FormProductDetail
             // 

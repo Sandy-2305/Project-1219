@@ -208,7 +208,7 @@ namespace WindowsFormsApp1
             Int32.TryParse(lblPrice.Text, out intPrice);
             Int32.TryParse(txtCount.Text, out intCount);
          
-            if (intCount < 10)
+            if (intCount <= 10)
             {
                 lblAll.Text = (intPrice * intCount).ToString();
             }

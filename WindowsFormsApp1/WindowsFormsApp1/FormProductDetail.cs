@@ -180,5 +180,22 @@ namespace WindowsFormsApp1
                 MessageBox.Show("必須填寫所有欄位");
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+       
+            if (ID > 0)
+            {
+                SqlConnection con = new SqlConnection(strMyPJDBConnectionString);
+                con.Open();
+                string strSQL = "delete from Products where ProductID = @DeleteID;";
+                SqlCommand cmd = new SqlCommand(strSQL, con);
+                cmd.Parameters.AddWithValue("@DeleteID", ID);
+
+                int rows = cmd.ExecuteNonQuery();
+                con.Close();
+                MessageBox.Show($"({rows}個資料列受到影響)");
+            }
+        }
     }
 }

@@ -18,8 +18,7 @@ namespace WindowsFormsApp1
         List<string> listProductName = new List<string>();  // list產品名稱
         List<int> listProductPrice = new List<int>();       // list產品價格
         List<int> listProductID = new List<int>();          // list產品ID
-        int PID = 0;
-
+    
 
         public FormProductsView()
         {
