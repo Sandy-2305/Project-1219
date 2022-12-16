@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace WindowsFormsApp1
 {
@@ -17,6 +18,7 @@ namespace WindowsFormsApp1
         List<string> listProductName = new List<string>();  // list產品名稱
         List<int> listProductPrice = new List<int>();       // list產品價格
         List<int> listProductID = new List<int>();          // list產品ID
+        int PID = 0;
 
 
         public FormProductsView()
@@ -56,6 +58,8 @@ namespace WindowsFormsApp1
             reader.Close();
             con.Close();
         }
+
+ 
         private void FormProductsView_Load(object sender, EventArgs e)
         {
             SqlConnectionStringBuilder scsb = new SqlConnectionStringBuilder();
@@ -65,7 +69,7 @@ namespace WindowsFormsApp1
             strMyPJDBConnectionString = scsb.ToString();
             SQL();
             picturemode();
-            if (GlobalVar.intPerms == 1)
+            if (GlobalVar.intPerms != 10)
             {
                 btnNewProduct.Hide();
             }
@@ -160,5 +164,6 @@ namespace WindowsFormsApp1
             FormProductDetail myFormDetail = new FormProductDetail();
             myFormDetail.ShowDialog();
         }
+
     }
 }

@@ -88,7 +88,7 @@ namespace WindowsFormsApp1
         {
             SqlConnection con = new SqlConnection(strMyPJDBConnectString);
             con.Open();
-            string strSQL = "select ID as 會員編號, 姓名, 電話, 地址, 生日, Email as 電子郵件, Point as 會員點數 from Customers";
+            string strSQL = "select * from Customers";
             SqlCommand cmd = new SqlCommand(strSQL, con);
             SqlDataReader reader = cmd.ExecuteReader();
 
@@ -139,7 +139,7 @@ namespace WindowsFormsApp1
                         txtEmail.Text = reader["Email"].ToString();
                         txtPoint.Text = reader["Point"].ToString();
                         dtpBirth.Value = Convert.ToDateTime(reader["生日"]);
-
+                        txtPwd.Text = reader["Password"].ToString();
                     }
                     else
                     {
@@ -196,7 +196,7 @@ namespace WindowsFormsApp1
                 int idxrow = dataGridView1.CurrentRow.Index;
                 SqlConnection con = new SqlConnection(strMyPJDBConnectString);
                 con.Open();
-                string strSQL = "update Customers set 姓名=@NewName, 電話=@NewPhone, 地址=@NewAddress, Email=@NewEmail, 生日=@NewBirth, Point=@NewPoints where ID = @SearchID;";
+                string strSQL = "update Customers set 姓名=@NewName, 電話=@NewPhone, 地址=@NewAddress, Email=@NewEmail, 生日=@NewBirth, Point=@NewPoints, Password=@NewPwd where ID = @SearchID;";
                 SqlCommand cmd = new SqlCommand(strSQL, con);
                 cmd.Parameters.AddWithValue("@NewName", txtName.Text);
                 cmd.Parameters.AddWithValue("@NewPhone", txtPhone.Text);
@@ -208,6 +208,7 @@ namespace WindowsFormsApp1
                 Int32.TryParse(txtPoint.Text, out intPoints);
                 cmd.Parameters.AddWithValue("@NewPoints", intPoints);
                 cmd.Parameters.AddWithValue("@SearchID", intID);
+                cmd.Parameters.AddWithValue("@NewPwd", txtPwd.Text);
 
                 int rows = cmd.ExecuteNonQuery();
                 con.Close();

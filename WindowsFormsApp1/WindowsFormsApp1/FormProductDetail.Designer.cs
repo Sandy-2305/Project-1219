@@ -50,6 +50,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txtProductType = new System.Windows.Forms.TextBox();
+            this.btnDelete = new System.Windows.Forms.Button();
             this.groupBoxNewProduct.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxProduct)).BeginInit();
             this.groupBoxAlterProduct.SuspendLayout();
@@ -130,6 +131,7 @@
             // groupBoxAlterProduct
             // 
             this.groupBoxAlterProduct.BackColor = System.Drawing.Color.Wheat;
+            this.groupBoxAlterProduct.Controls.Add(this.btnDelete);
             this.groupBoxAlterProduct.Controls.Add(this.btnAlter);
             this.groupBoxAlterProduct.Controls.Add(this.btnSelectPic1);
             this.groupBoxAlterProduct.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
@@ -148,7 +150,7 @@
             this.btnAlter.FlatAppearance.BorderSize = 0;
             this.btnAlter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAlter.ForeColor = System.Drawing.Color.White;
-            this.btnAlter.Location = new System.Drawing.Point(146, 111);
+            this.btnAlter.Location = new System.Drawing.Point(146, 87);
             this.btnAlter.Margin = new System.Windows.Forms.Padding(2);
             this.btnAlter.Name = "btnAlter";
             this.btnAlter.Size = new System.Drawing.Size(156, 38);
@@ -163,7 +165,7 @@
             this.btnSelectPic1.FlatAppearance.BorderSize = 0;
             this.btnSelectPic1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSelectPic1.ForeColor = System.Drawing.Color.White;
-            this.btnSelectPic1.Location = new System.Drawing.Point(146, 53);
+            this.btnSelectPic1.Location = new System.Drawing.Point(146, 38);
             this.btnSelectPic1.Margin = new System.Windows.Forms.Padding(2);
             this.btnSelectPic1.Name = "btnSelectPic1";
             this.btnSelectPic1.Size = new System.Drawing.Size(156, 38);
@@ -320,6 +322,20 @@
             this.txtProductType.Size = new System.Drawing.Size(233, 25);
             this.txtProductType.TabIndex = 28;
             // 
+            // btnDelete
+            // 
+            this.btnDelete.BackColor = System.Drawing.Color.Maroon;
+            this.btnDelete.FlatAppearance.BorderSize = 0;
+            this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDelete.ForeColor = System.Drawing.Color.White;
+            this.btnDelete.Location = new System.Drawing.Point(146, 136);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(156, 38);
+            this.btnDelete.TabIndex = 2;
+            this.btnDelete.Text = "下架商品";
+            this.btnDelete.UseVisualStyleBackColor = false;
+            // 
             // FormProductDetail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -381,5 +397,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtProductType;
+        private System.Windows.Forms.Button btnDelete;
     }
 }

@@ -89,7 +89,11 @@ namespace WindowsFormsApp1
                     int rows = cmd2.ExecuteNonQuery();
                     con.Close();
                     Console.WriteLine($"({rows}個資料列受到影響)");
+                   
+                    this.Close();
                     MessageBox.Show("註冊成功");
+
+                    
                 }
                 
                 con.Close();

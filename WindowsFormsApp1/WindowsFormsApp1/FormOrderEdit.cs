@@ -63,7 +63,6 @@ namespace WindowsFormsApp1
             lblOrderName.Text = "";
             lblProductName.Text = "";
             lblAll.Text = "";
-            lblDate.Text = "";
             checkBoxOut.Checked=false;
             checkBoxBag.Checked = false;
             

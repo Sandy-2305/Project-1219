@@ -55,8 +55,8 @@
             this.txtKeyWord = new System.Windows.Forms.TextBox();
             this.FliterSearch = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.lblDate = new System.Windows.Forms.GroupBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.Order = new System.Windows.Forms.GroupBox();
+            this.lblDate = new System.Windows.Forms.Label();
             this.checkBoxOut = new System.Windows.Forms.CheckBox();
             this.label8 = new System.Windows.Forms.Label();
             this.checkBoxBag = new System.Windows.Forms.CheckBox();
@@ -93,7 +93,7 @@
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel10.SuspendLayout();
-            this.lblDate.SuspendLayout();
+            this.Order.SuspendLayout();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -159,7 +159,7 @@
             // panel2
             // 
             this.panel2.Controls.Add(this.groupBox3);
-            this.panel2.Controls.Add(this.lblDate);
+            this.panel2.Controls.Add(this.Order);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
@@ -414,53 +414,53 @@
             this.comboBox1.Size = new System.Drawing.Size(91, 33);
             this.comboBox1.TabIndex = 13;
             // 
+            // Order
+            // 
+            this.Order.BackColor = System.Drawing.Color.Cornsilk;
+            this.Order.Controls.Add(this.lblDate);
+            this.Order.Controls.Add(this.checkBoxOut);
+            this.Order.Controls.Add(this.label8);
+            this.Order.Controls.Add(this.checkBoxBag);
+            this.Order.Controls.Add(this.外帶);
+            this.Order.Controls.Add(this.lblProductName);
+            this.Order.Controls.Add(this.lblPrice);
+            this.Order.Controls.Add(this.單價);
+            this.Order.Controls.Add(this.txtDetail);
+            this.Order.Controls.Add(this.label7);
+            this.Order.Controls.Add(this.label6);
+            this.Order.Controls.Add(this.lblAll);
+            this.Order.Controls.Add(this.label9);
+            this.Order.Controls.Add(this.txtCount);
+            this.Order.Controls.Add(this.lblOrderID);
+            this.Order.Controls.Add(this.label5);
+            this.Order.Controls.Add(this.label4);
+            this.Order.Controls.Add(this.label3);
+            this.Order.Controls.Add(this.label2);
+            this.Order.Controls.Add(this.label1);
+            this.Order.Controls.Add(this.lblOrderName);
+            this.Order.Dock = System.Windows.Forms.DockStyle.Left;
+            this.Order.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.Order.ForeColor = System.Drawing.Color.Maroon;
+            this.Order.Location = new System.Drawing.Point(0, 0);
+            this.Order.Margin = new System.Windows.Forms.Padding(4);
+            this.Order.Name = "Order";
+            this.Order.Padding = new System.Windows.Forms.Padding(4);
+            this.Order.Size = new System.Drawing.Size(481, 503);
+            this.Order.TabIndex = 5;
+            this.Order.TabStop = false;
+            this.Order.Text = "訂單";
+            // 
             // lblDate
             // 
-            this.lblDate.BackColor = System.Drawing.Color.Cornsilk;
-            this.lblDate.Controls.Add(this.label15);
-            this.lblDate.Controls.Add(this.checkBoxOut);
-            this.lblDate.Controls.Add(this.label8);
-            this.lblDate.Controls.Add(this.checkBoxBag);
-            this.lblDate.Controls.Add(this.外帶);
-            this.lblDate.Controls.Add(this.lblProductName);
-            this.lblDate.Controls.Add(this.lblPrice);
-            this.lblDate.Controls.Add(this.單價);
-            this.lblDate.Controls.Add(this.txtDetail);
-            this.lblDate.Controls.Add(this.label7);
-            this.lblDate.Controls.Add(this.label6);
-            this.lblDate.Controls.Add(this.lblAll);
-            this.lblDate.Controls.Add(this.label9);
-            this.lblDate.Controls.Add(this.txtCount);
-            this.lblDate.Controls.Add(this.lblOrderID);
-            this.lblDate.Controls.Add(this.label5);
-            this.lblDate.Controls.Add(this.label4);
-            this.lblDate.Controls.Add(this.label3);
-            this.lblDate.Controls.Add(this.label2);
-            this.lblDate.Controls.Add(this.label1);
-            this.lblDate.Controls.Add(this.lblOrderName);
-            this.lblDate.Dock = System.Windows.Forms.DockStyle.Left;
-            this.lblDate.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.lblDate.ForeColor = System.Drawing.Color.Maroon;
-            this.lblDate.Location = new System.Drawing.Point(0, 0);
-            this.lblDate.Margin = new System.Windows.Forms.Padding(4);
+            this.lblDate.BackColor = System.Drawing.Color.Wheat;
+            this.lblDate.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.lblDate.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.lblDate.Location = new System.Drawing.Point(167, 402);
+            this.lblDate.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDate.Name = "lblDate";
-            this.lblDate.Padding = new System.Windows.Forms.Padding(4);
-            this.lblDate.Size = new System.Drawing.Size(481, 503);
-            this.lblDate.TabIndex = 5;
-            this.lblDate.TabStop = false;
-            this.lblDate.Text = "訂單";
-            // 
-            // label15
-            // 
-            this.label15.BackColor = System.Drawing.Color.Wheat;
-            this.label15.Font = new System.Drawing.Font("微軟正黑體", 10.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.label15.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label15.Location = new System.Drawing.Point(167, 402);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(251, 28);
-            this.label15.TabIndex = 82;
-            this.label15.Text = "日期";
+            this.lblDate.Size = new System.Drawing.Size(251, 28);
+            this.lblDate.TabIndex = 82;
+            this.lblDate.Text = "日期";
             // 
             // checkBoxOut
             // 
@@ -735,7 +735,7 @@
             this.btnDataRecovery.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDataRecovery.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnDataRecovery.ForeColor = System.Drawing.Color.White;
-            this.btnDataRecovery.Location = new System.Drawing.Point(26, 134);
+            this.btnDataRecovery.Location = new System.Drawing.Point(26, 148);
             this.btnDataRecovery.Margin = new System.Windows.Forms.Padding(4);
             this.btnDataRecovery.Name = "btnDataRecovery";
             this.btnDataRecovery.Size = new System.Drawing.Size(122, 36);
@@ -751,7 +751,7 @@
             this.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDelete.Font = new System.Drawing.Font("微軟正黑體", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.btnDelete.ForeColor = System.Drawing.Color.White;
-            this.btnDelete.Location = new System.Drawing.Point(26, 97);
+            this.btnDelete.Location = new System.Drawing.Point(26, 104);
             this.btnDelete.Margin = new System.Windows.Forms.Padding(4);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(122, 36);
@@ -804,8 +804,8 @@
             this.panel3.PerformLayout();
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
-            this.lblDate.ResumeLayout(false);
-            this.lblDate.PerformLayout();
+            this.Order.ResumeLayout(false);
+            this.Order.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -824,7 +824,7 @@
         private System.Windows.Forms.Button btnDataRecovery;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.Button btnAlter;
-        private System.Windows.Forms.GroupBox lblDate;
+        private System.Windows.Forms.GroupBox Order;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox txtCount;
         private System.Windows.Forms.Label lblOrderID;
@@ -867,6 +867,6 @@
         private System.Windows.Forms.TextBox txtKeyWord;
         private System.Windows.Forms.Button FliterSearch;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label lblDate;
     }
 }
